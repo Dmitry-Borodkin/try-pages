@@ -1,0 +1,4 @@
+site_name: Try Pages
+site_url: https://dmitry-borodkin.github.io/try-pages
+theme:
+  name: material

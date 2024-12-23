@@ -1,0 +1,819 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://dmitry-borodkin.github.io/try-pages/strange/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../tutorial/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Strange - Try Pages</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-void-programming-language" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Try Pages" class="md-header__button md-logo" aria-label="Try Pages" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Try Pages
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Strange
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Try Pages" class="md-nav__button md-logo" aria-label="Try Pages" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Try Pages
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to MkDocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Strange
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Strange
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hello-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hello world:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-architecture-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main architecture features:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yet-another-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Yet another example:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-more-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      One more example:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nearest-todos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nearest TODO(s):
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contributing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hello-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hello world:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-architecture-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main architecture features:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yet-another-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Yet another example:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-more-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      One more example:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nearest-todos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nearest TODO(s):
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contributing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><img alt="Black Square" src="./doc/img/black_square.png" /></p>
+<h1 id="the-void-programming-language">The Void Programming Language</h1>
+<p><em><p align='right'>"Programming language is not a templum, it's a workshop." (c)...</p></em></p>
+<p>Void is an open-source, highly extensible programming language, minimalistic and low-level in its base.
+It uses LLVM for code generation and can be seen as a thin (well, in some sense) shell around it.
+Extensibility of Void is practically limitless (any syntax/semantics),
+restricted only by decidability and ~your money~ imagination.</p>
+<p>Here is the author's blog dedicated to this project: <a href="https://github.com/Dmitry-Borodkin/void_blog">Void Blog</a>.</p>
+<h4 id="hello-world">Hello world:</h4>
+<pre><code class="language-C">{   v_import(&quot;printf.void&quot;); }      // Import declaration of C's &quot;printf&quot;
+
+{   printf(&quot;Hello, world\n&quot;); }     // Just call it...
+</code></pre>
+<p>See more details in <a href="doc/tutorial.md">tutorial</a>.
+(Spoiler: it's all about those <em>magic curly braces</em>... :wink:)</p>
+<h4 id="main-architecture-features">Main architecture features:</h4>
+<ul>
+<li>
+<p>Starting from minimalistic language "kernel", which is:</p>
+<ul>
+<li>Compatible with "C" by key types and calling conventions;</li>
+<li>Able to call (almost) arbitrary C-functions (from libc, LLVM, whatever);</li>
+<li>Has some built-in "module importing" system (with pre-<em>compilation</em> support);</li>
+<li>Has some predefined tools for further "bootstrapping".</li>
+</ul>
+</li>
+<li>
+<p>Continuing with exposing compiler's internal API(s):</p>
+<ul>
+<li>Extensible parser based on PEG-machinery;</li>
+<li>Extensible AST;</li>
+<li>Extensible compiler based on "visitor pattern";</li>
+<li>Exposing essential parts of LLVM-C API (Core, TargetMachine, etc.).</li>
+</ul>
+</li>
+<li>
+<p>Developing "basic" language features:</p>
+<ul>
+<li>Ability to create (C-compatible) functions;</li>
+<li>Basic set of control flow constructions: "if then else", "block", "loop", "switch", "defer";</li>
+<li>Comfortable "syntactic sugar" for grammar development;</li>
+<li>C-like expressions (with some additional "twists");</li>
+<li>Finally, some "normal" syntax for function's and variable's definitions/declarations.</li>
+</ul>
+</li>
+<li>
+<p>Extending the language:</p>
+<ul>
+<li>Comprehensive numeric literals;</li>
+<li>Sophisticated control flow constuctions: "while", "for", extended "if then else" and "switch";</li>
+<li>Conditional compilation;</li>
+<li>Aggregate "initializations";</li>
+<li>Simple compiler's handlers;</li>
+<li>"Simple" overloading of operators;</li>
+<li>"Projections" (functions with syntax <code>a.something</code>);</li>
+<li>Simple structures with named fields;</li>
+<li>"Mangling" (fancy function names to help overloading/projections);</li>
+<li>Function inlining;</li>
+<li>Unions (like in C).</li>
+</ul>
+</li>
+<li>
+<p>Advanced language features:</p>
+<ul>
+<li>Objects ("simplified" OOP);</li>
+<li>Coercions ("single", "projective" and "injective");</li>
+<li>Namespaces (regular and parameterized);</li>
+<li>Some support for generic types;</li>
+<li>Something like "AST literals";</li>
+<li>Macros (which are also templates);</li>
+<li>...</li>
+</ul>
+</li>
+<li>
+<p>...</p>
+</li>
+</ul>
+<p>For the moment (Sep 2024), language seems to be ready just for some early experiments...</p>
+<h4 id="yet-another-example">Yet another example:</h4>
+<pre><code>{ v_import(&quot;mainline.void&quot;); }      // Import &quot;mainline&quot; language
+{ v_enable_mainline(); }            // &quot;Enable&quot; it
+
+//---------------------------------------------------------------------
+num_t = uint(1024);                 // 1024 bits, unsigned
+
+check_fruits: (a: &amp;num_t, b: &amp;num_t, c: &amp;num_t) ~&gt; bool     // By reference
+{
+    ab = a + b;     ac = a + c;     bc = b + c;
+
+    v_return(a*ab*ac + b*ab*bc + c*ac*bc == 4*ab*ac*bc);
+}
+
+//---------------------------------------------------------------------
+// Constants
+
+A: num_t = 154476802108746166441951315019919837485664325669565431700026634898253202035277999;
+B: num_t =  36875131794129999827197811565225474825492979968971970996283137471637224634055579;
+C: num_t =   4373612677928697257861252602371390152816537558161613618621437993378423467772036;
+
+//---------------------------------------------------------------------
+{   printf: (*const char, ...) ~&gt; int;              // Declaration
+
+    if (check_fruits(A, B, C))  printf(&quot;\nOK\n&quot;);
+    else                        printf(&quot;\nFail\n&quot;);
+}
+</code></pre>
+<p><strong>Note:</strong> Void is <em>not</em> intended to be seen as a complete/finished/whatever programming language in usual sense...
+In fact, it is merely a toolkit/workshop/boilerplate/etc. for development of programming languages <em>per se</em>,
+and for development of <em>itself</em> particularly.</p>
+<h4 id="one-more-example">One more example:</h4>
+<pre><code>{ v_import(&quot;mainline.void&quot;); }
+{ v_enable_mainline(); }
+
+//---------------------------------------------------------------------
+double = float(64);                 // Kinda, &quot;typedef&quot;
+
+sqrt: (double) ~&gt; double;
+ceil: (double) ~&gt; double;
+log:  (double) ~&gt; double;
+
+//---------------------------------------------------------------------
+N = 10001;                                      // For N-th prime ...
+
+S = (N*(log(N) + log(log(N))) : int) + 1;       // ... should be enough
+
+sieve = new bool[S];    defer delete[] sieve;
+
+//---------------------------------------------------------------------
+{   memset: (s: *void, c: int, n: size_t) ~&gt; *void;
+
+    memset(sieve, 0, S);
+
+    sieve[2] := true;
+
+    for (i: &amp;int := 3; i &lt; S; i += 2)
+    {
+        sieve[i] := true;
+    }
+
+    R = (ceil(sqrt(S)) : int);
+
+    for (i: &amp;int := 3; i &lt; R; i += 2)
+    {
+        if (sieve[i])
+        {
+            for (k: &amp;int := i*i, i2 = 2*i; k &lt; S; k += i2)
+            {
+                sieve[k] := false;
+            }
+        }
+    }
+}
+
+//---------------------------------------------------------------------
+{   n: &amp;int := 1;
+    p: &amp;int := 3;
+
+    for (; p &lt; S; p += 2)
+    {
+        if (sieve[p])
+        {
+            ++n;
+
+            if (n == N) v_break();
+        }
+    }
+
+    printf: (*const char, ...) ~&gt; int;
+
+    if (n == N) printf(&quot;Found: %d\n&quot;, p);
+    else        printf(&quot;Not found\n&quot;);
+}
+</code></pre>
+<h4 id="nearest-todos">Nearest TODO(s):</h4>
+<ul>
+<li>
+<p>Documenting everything written so far;</p>
+</li>
+<li>
+<p>Preparing for next developments:</p>
+<ul>
+<li>Standard library (strings, smart pointers, containers, etc.);</li>
+<li><em>Protocols</em>:</li>
+<li>"Variants and matching",</li>
+<li>...</li>
+<li>"Bootstrapping"...</li>
+</ul>
+</li>
+<li>
+<p>...</p>
+</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>The <code>voidc</code> is "tested" (well, in some sense) under Linux and Windows (MSYS2/Mingw64) environments.</p>
+<h4 id="dependencies">Dependencies:</h4>
+<ul>
+<li>LLVM/Clang (v.15 or later);</li>
+<li>C++ library <a href="https://github.com/arximboldi/immer">immer</a> (should be "visible" for include...).</li>
+</ul>
+<h4 id="build">Build:</h4>
+<p>Try scripts (CMake needed)...</p>
+<pre><code class="language-bash">$ ./mk_config
+
+$ ./mk_build
+</code></pre>
+<h2 id="usage">Usage</h2>
+<p>Currently (Sep 2024) <code>voidc</code> works mainly from it's source directory.</p>
+<p>You can try some of:</p>
+<pre><code class="language-bash">$ build/voidc hello.void
+
+$ build/voidc hello_jit.void
+</code></pre>
+<p>You should see the sacramental "Hello, world!" messages with some LLVM's printouts...</p>
+<p>BTW, first time it can take a while due to long (idk, 10-30 sec) compilation of huge <code>llvm-c/Core.void</code>.</p>
+<p>After that, try:</p>
+<pre><code class="language-bash">$ build/voidc level-03/macros_test.void
+</code></pre>
+<p>This "script" (with imports) uses almost all language features developed so far.
+And yes, first-time compilation of it can take even longer...</p>
+<h2 id="contributing">Contributing</h2>
+<p>Of course, contributions are <strong>welcome</strong>!
+But I must warn you that at this point I am a newbie
+to things like GitHub, project/community maintaining, etc.</p>
+<p>So, for any friendly help (on these topics especially) I'll be greatly appreciated!</p>
+<h2 id="license">License</h2>
+<p><a href="https://www.gnu.org/licenses/lgpl-3.0.txt">LGPL-3.0</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>

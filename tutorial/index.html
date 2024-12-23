@@ -1,0 +1,1615 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://dmitry-borodkin.github.io/try-pages/tutorial/">
+      
+      
+        <link rel="prev" href="../strange/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Tutorial - Try Pages</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-void-programming-language-tutorial" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Try Pages" class="md-header__button md-logo" aria-label="Try Pages" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Try Pages
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tutorial
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Try Pages" class="md-nav__button md-logo" aria-label="Try Pages" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Try Pages
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to MkDocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Strange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tutorial
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Tutorial
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-hello-world-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      The "Hello, world" example:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-extended-hello-world-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      The extended "Hello, world" example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#language-syntax-and-semantics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Language syntax (and semantics).
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-starter-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Starter Language.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Starter Language.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntax-and-a-bit-of-semantics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Syntax (and a bit of semantics).
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#not-all-functions-are-the-same" class="md-nav__link">
+    <span class="md-ellipsis">
+      Not all functions are the same...
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voids-reserved-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      Void's Reserved Names
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-voids-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Void's Types.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Void's Types.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integer-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integer types.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#floating-point-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Floating point types.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pointer-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pointer types.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference types.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Array types.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vector-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vector types.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#structure-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structure types.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function types.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Void type.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some-notes-on-datatypes-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Some notes on data/types representation ...
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-mainline-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Mainline Language.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Mainline Language.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-turn-on-mainline-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to "turn on" Mainline Language.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-most-important-innovations" class="md-nav__link">
+    <span class="md-ellipsis">
+      The most important innovations:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definitions-and-declarations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definitions and declarations.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definitions and declarations.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definitions.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definitions.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defining-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining constants.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defining-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining variables.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defining-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining functions.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defining-structunion-types-with-named-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining struct/union types with named fields.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#declarations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declarations.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Declarations.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-declarations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function declarations.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-declarations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variable declarations.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constant-declarations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constant declarations.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expressions.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Expressions.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#to-be-continued" class="md-nav__link">
+    <span class="md-ellipsis">
+      To be continued...
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-hello-world-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      The "Hello, world" example:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-extended-hello-world-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      The extended "Hello, world" example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#language-syntax-and-semantics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Language syntax (and semantics).
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-starter-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Starter Language.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Starter Language.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntax-and-a-bit-of-semantics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Syntax (and a bit of semantics).
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#not-all-functions-are-the-same" class="md-nav__link">
+    <span class="md-ellipsis">
+      Not all functions are the same...
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voids-reserved-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      Void's Reserved Names
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-voids-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Void's Types.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Void's Types.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integer-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integer types.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#floating-point-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Floating point types.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pointer-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pointer types.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference types.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Array types.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vector-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vector types.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#structure-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structure types.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function types.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Void type.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some-notes-on-datatypes-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Some notes on data/types representation ...
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-mainline-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Mainline Language.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Mainline Language.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-turn-on-mainline-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to "turn on" Mainline Language.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-most-important-innovations" class="md-nav__link">
+    <span class="md-ellipsis">
+      The most important innovations:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definitions-and-declarations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definitions and declarations.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definitions and declarations.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definitions.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definitions.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defining-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining constants.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defining-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining variables.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defining-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining functions.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defining-structunion-types-with-named-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining struct/union types with named fields.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#declarations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declarations.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Declarations.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-declarations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function declarations.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-declarations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variable declarations.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constant-declarations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constant declarations.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expressions.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Expressions.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#to-be-continued" class="md-nav__link">
+    <span class="md-ellipsis">
+      To be continued...
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="the-void-programming-language-tutorial">The Void Programming Language Tutorial</h1>
+<p><strong>Disclaimer:</strong> this tutorial assumes the reader has a rather good knowledge of C/C++,
+understands basic notions of LLVM-C API, and in general "has an idea of how compilers work"...</p>
+<h3 id="the-hello-world-example">The "Hello, world" example:</h3>
+<pre><code>{   v_import(&quot;printf.void&quot;); }      // Import declaration of C's &quot;printf&quot;
+
+{   printf(&quot;Hello, world\n&quot;); }     // Just call it...
+</code></pre>
+<p>Void's source text is a sequence of so-called "units".
+In example above you can see two of them: the first with <code>v_import</code>, and the second with <code>printf</code>.
+Each unit is (usually) enclosed in (<em>magic</em>) curly braces and can be thought of as a function body in a "C"-like syntax.</p>
+<p>Units are processed by the <code>voidc</code> compiler sequentially, one by one.
+For each unit, the following operations are performed, in order:</p>
+<ol>
+<li>Source text is <em>parsed</em> down to the enclosing <code>}</code>, resulting in the AST.</li>
+<li>The AST is <em>compiled</em> to the object file (in memory) which contains the "unit action" function.</li>
+<li>This "unit action" is <em>executed</em> in compiler's environment by LLVM's JIT.</li>
+</ol>
+<p>I.e. <em>parsing</em> of the next unit will start right after the previous one has been <em>executed</em>...</p>
+<p>In the "Hello, world" example above the first unit calls the compiler's intrinsic function <code>v_import</code>.
+This function receives the name of the source file "printf.void" (from the Voidc's root directory)
+and "imports" it into the "current scope". The "printf.void" file "gives out" only the declaration
+of C's <code>printf</code> function. But that's enough for the second unit which calls this function with sacramental
+greeting message as an argument.</p>
+<p><strong>Essential Note:</strong> it is very important to understand the consequences of this
+<em>parse-compile-execute</em> architecture of the Voidc's "mainloop"...
+It's the key to ~enormous~ extensibility of the Void as a language.
+Each unit can change compiler's state into "something completely different"(c)...
+This feature intendend to be seen as the ~back~door to the compiler.
+You just open the curly brace and enter the compiler as your workshop...
+This is why these curly braces are <em>magic</em> :wink:.</p>
+<h3 id="the-extended-hello-world-example">The extended "Hello, world" example</h3>
+<p>Let's try to dig a bit deeper and see how it's possible to declare <code>printf</code>
+"from scratch", without any <em>imports</em>...</p>
+<pre><code>// Unit 1: declaration of the v_pointer_type
+{
+    typ0 = v_alloca(v_type_ptr, 2);     // Allocate &quot;array&quot; for two types
+    typ1 = v_getelementptr(typ0, 1);    // Get pointer to the second element
+
+    v_store(v_type_ptr, typ0);          // Argument 1: element type
+    v_store(unsigned,   typ1);          // Argument 2: address space
+
+    ft = v_function_type(v_type_ptr,    // Return type
+                         typ0,          // Argument types
+                         2,             // Number of arguments
+                         false);        // VarArgs? (not)
+
+    v_add_symbol(&quot;v_pointer_type&quot;,      // Symbol name  (function name)
+                 ft,                    // Symbol type  (function type)
+                 0);                    // Symbol value (none - just declaration)
+}
+
+// Unit 2: declaration of the printf
+{
+    typ = v_alloca(v_type_ptr);
+
+    char_ptr = v_pointer_type(char, 0);
+
+    v_store(char_ptr, typ);             // Format string
+
+    ft = v_function_type(int, typ, 1, true);
+    v_add_symbol(&quot;printf&quot;, ft, 0);
+}
+
+// Unit 3: call the printf
+{
+    printf(&quot;Hello, world\n&quot;);
+}
+</code></pre>
+<p>First of all, it must be mentioned that when <code>voidc</code> starts to read the source file,
+it begins with "minimal" internal environment. Only very few names are pre-declared.
+Everything else, that we wish to use, must be declared "by hands" (or by imports)...</p>
+<p>In the case of <code>printf</code> we have almost all necessary tools accessible, except one -
+the function <code>v_pointer_type</code> (to build "pointer to char" type).
+So, the first unit makes exactly this thing: it declares the <code>v_pointer_type</code> function...</p>
+<p>As is often the case in programming, it is best to read it <em>sdrawkcab</em>:</p>
+<ul>
+<li>
+<p>The last statement of the unit calls the function <code>v_add_symbol</code> to "declare" the <code>v_pointer_type</code> function.
+  The term "symbol" here denotes a symbol in the terminology of (JIT's) linker.</p>
+</li>
+<li>
+<p>The last but one statement builds the type of the <code>v_pointer_type</code> function.</p>
+</li>
+<li>
+<p>The previous pair of statements (containing <code>v_store</code>) form the list of argument types for the <code>v_pointer_type</code> function.</p>
+</li>
+<li>
+<p>And "finally", the first couple of statements prepare the memory (in stack) for the list of argument types.</p>
+</li>
+</ul>
+<p>Many important details have been omitted for brevity...</p>
+<p>The second unit, in similiar way as the first one, declares the <code>printf</code> function.
+Note the use of the <code>v_pointer_type</code> function.</p>
+<p>The third unit just calls the <code>printf</code>...</p>
+<h2 id="language-syntax-and-semantics">Language syntax (and semantics).</h2>
+<p>In fact, Void as a language <em>has no</em> fixed/constant/static syntax/semantics...
+Instead, it has a minimalist "starter language" and a set of "language development" tools.
+Then the language is <em>developed</em>, and this development is organized into so-called "levels".</p>
+<p>For the moment (Nov 2023) there are four levels:</p>
+<ul>
+<li><a href="../level-00/README.md">Level 0.0</a> - "Starter Language" and compiler API.</li>
+<li><a href="../level-01/README.md">Level 0.1</a> - Control flow, grammars, expressions and declarations/definitions.</li>
+<li><a href="../level-02/README.md">Level 0.2</a> - "C on steroids"...</li>
+<li><a href="../level-03/README.md">Level 0.3</a> - Kinda, objects...</li>
+</ul>
+<p>All these levels together form the so-called "Mainline Language".</p>
+<p>First we'll go over the Starter Language a little. Just to feel "how it started".
+Then we'll take a closer look at the Mainline Language. To find out "how it's going"...</p>
+<h2 id="the-starter-language">The Starter Language.</h2>
+<h3 id="syntax-and-a-bit-of-semantics">Syntax (and a bit of semantics).</h3>
+<ul>
+<li>The <code>voidc</code> awaits source files properly encoded in UTF-8.</li>
+<li>Parser works at a Unicode Code Point "granularity".</li>
+<li>Whitespaces are: <code>' '</code>, <code>'\t'</code>, <code>'\n'</code> and <code>'\r'</code> (in C's notation).</li>
+<li>Comments are BCPL's <code>//</code> till the end of line.</li>
+<li>Whitespaces and comments mostly ignored (just delimiters, like in C).</li>
+</ul>
+<p>Abstract syntax can be expressed in EBNF-like notation:</p>
+<pre><code class="language-EBNF">unit = &quot;{&quot; {stmt} &quot;}&quot;
+
+stmt = [[ident &quot;=&quot;] expr] &quot;;&quot;
+
+expr = prim {&quot;(&quot; [expr {&quot;,&quot; expr}] &quot;)&quot;}
+
+prim = ident | integer | string | char
+</code></pre>
+<ul>
+<li>Identifiers are C's: <code>[a-zA-Z_][a-zA-Z_0-9]*</code>, case-sensitive.</li>
+<li>Integers only decimal, optionaly signed, without leading zeros.</li>
+<li>Strings and chars similiar to C's, with some "restrictions":</li>
+<li>Strings are NOT "auto-concatenable".</li>
+<li>Escapes limited only to <code>\t</code>, <code>\n</code>, <code>\r</code>, <code>\'</code>, <code>\"</code> and <code>\\</code>.</li>
+<li>Any other valid non-null Unicode Code Points are <em>allowed</em>.</li>
+</ul>
+<p>So, as you can see, the Starter Language is rather limited:</p>
+<ul>
+<li>There are no keywords.</li>
+<li>There are no operators.</li>
+<li>There is no arithmetic.</li>
+<li>There is no flow control.</li>
+<li>There is no preprocessor.</li>
+<li>There are no floating-point, hexadecimal, octal or binary literals.</li>
+<li>Etc, etc, etc ...</li>
+</ul>
+<p>How the hell it is possible to program in it?</p>
+<p>Well... To get an idea you can check the <a href="../hello_jit.void">"hello_jit.void"</a> example.</p>
+<p>In Void you <em>must</em> "write program to write program"(c)...</p>
+<p>All the Starter Language really allows is to call functions. Sequentially.</p>
+<pre><code>printf(&quot;Hello!\n&quot;);
+printf(&quot;Hello again!\n&quot;);
+printf(&quot;Hello one more time!\n&quot;);
+</code></pre>
+<p>Function calls can be nested and "curried" (like in C).</p>
+<pre><code>foo(bar(&quot;Hi&quot;, 42), 'Ы')(1, 2, 3)(-7);
+</code></pre>
+<p>What a function returns can be "named" by an identifier.</p>
+<pre><code>n = strlen(&quot;Some string&quot;);
+</code></pre>
+<p>These identifiers can be used in subsequent statements.</p>
+<pre><code>C = 'Ъ';
+
+printf(&quot;Cyrillic Capital Letter Hard Sign: %d\n&quot;, C);
+</code></pre>
+<p>Identifiers also can be "shadowed" by subsequent "renamings" (like in Rust).</p>
+<pre><code>u = &quot;1&quot;;
+u = atof(u);
+
+v = u;
+
+v = fma(v, u, v);
+v = fma(v, u, v);
+v = fma(v, u, v);
+v = fma(v, u, v);
+
+printf(&quot;v: %g\n&quot;, v);
+</code></pre>
+<p>Please note, in contrast to C, in the Starter Language:</p>
+<ul>
+<li>The identifier to the left of the <code>=</code> symbol does NOT denote a <em>variable</em>.</li>
+<li>The <code>=</code> symbol does NOT denote an assignment.</li>
+</ul>
+<p>In fact, the semantics of <code>=</code> in Void is almost the same as in LLVM IR (with respect to "shadowing").</p>
+<p>Informally, it's possible to think of <code>=</code> as a kind of <em>definition</em> operator.
+It just "sticks" a label with the identifier on the left to the value received on the right...</p>
+<p>Also this is very similar to <code>&lt;-</code> from the monadic "do" notation (in Haskell).</p>
+<h3 id="not-all-functions-are-the-same">Not all functions are the same...</h3>
+<p>Let's look at <a href="#the-extended-hello-world-example">The extended "Hello, world" example</a>.
+In it's code there are several "function calls".
+Some of them actually call real functions (in the "C" language sense).
+But others do "something different"...</p>
+<p>Identifiers <code>v_alloca</code>, <code>v_getelementptr</code> and <code>v_store</code> denote so called <strong>"compile-time intrinsic functions"</strong>.
+Such functions actually called during <em>compilation</em> phase.
+They take arguments in the form of AST and their purpose is (usually) to generate code...</p>
+<p>As for the mentioned <em>"ct-intrinsics"</em>, their semantics correspond to the LLVM IR instructions of similar name.</p>
+<p>There are number of "predefined" compile-time intrinsics, and it's entirely possible to create your own.
+The main advantage of such functions is that they can be <em>polymorphic</em> in the broadest sense.
+They can interpret their arguments "by their own rules".
+They can generate code "in their own way" and/or change the state of the compiler "at their discretion"...</p>
+<p><em>Ct-intrinsics</em> are the most widely used "language development" tools mentioned above.</p>
+<h3 id="voids-reserved-names">Void's Reserved Names</h3>
+<p>Identifiers starting with <code>v_</code> and <code>voidc_</code> are reserved for the needs
+of the <code>voidc</code> compiler itself and the (future) standard library...</p>
+<p>In addition, careless use of external identifiers starting with <code>_</code>, <code>LLVM</code>, etc.
+can lead to collisions with the C/C++ and LLVM libraries.</p>
+<h3 id="the-voids-types">The Void's Types.</h3>
+<p>Starter Language's typing can be described as <em>static</em> and <em>implicit</em>.
+This means that the identifier to the left of the <code>=</code> takes the type
+<em>implicitly</em> determined by the expression on the right.
+This type does not change during identifier's "lifetime" (with respect to "shadowing").</p>
+<p>The Void has it's own type system, which is "mapped" to LLVM's one and can be seen as an <em>extension</em> of it...</p>
+<p>The Starter Language <em>has no</em> specific syntax for types.
+Therefore, we'll describe Void's type system "through the lens" of the compiler's types API.
+This API is designed to be similar (in spirit) to the LLVM-C API associated with LLVM's types.
+The implementation of Void's types is also very similar to LLVM's.</p>
+<p>As you can probably guessed, the name of the type of the Void's types representation is <code>v_type_ptr</code>.
+Like <code>LLVMTypeRef</code>, <code>v_type_ptr</code> looks like a pointer to some opaque structure.</p>
+<h4 id="integer-types">Integer types.</h4>
+<p>Void's integer types are all LLVM's ones with additional "attribute" of <em>signedness</em>.</p>
+<p>Yes! You can use integers of any bitwidth accepted by LLVM (i.e. 1 - 2<sup>23</sup>).
+And they can also be signed or unsigned.</p>
+<p>API in "C" syntax:</p>
+<pre><code class="language-C">v_type_ptr v_int_type(unsigned width);          // Signed
+v_type_ptr v_uint_type(unsigned width);         // Unsigned
+</code></pre>
+<p>There are number of predefined integral types which correspond to tagret's "C" integral types.
+Some of them: <code>char</code>, <code>short</code>, <code>int</code>, <code>unsigned</code>, <code>long</code>, <code>intptr_t</code> etc...</p>
+<p>Predefined type <code>bool</code> is the <code>v_uint_type(1)</code>. Named constants <code>false</code> and <code>true</code> have obvious type and values...</p>
+<h4 id="floating-point-types">Floating point types.</h4>
+<pre><code class="language-C">v_type_ptr v_f16_type();            // LLVM's half
+v_type_ptr v_f32_type();            // LLVM's float     - C's
+v_type_ptr v_f64_type();            // LLVM's double    - C's
+v_type_ptr v_f128_type();           // LLVM's fp128
+</code></pre>
+<h4 id="pointer-types">Pointer types.</h4>
+<pre><code class="language-C">v_type_ptr v_pointer_type(v_type_ptr elem, unsigned adsp);
+</code></pre>
+<p>These pointer types are similar to C's with respect to additional parameter of LLVM's "address space"...</p>
+<h4 id="reference-types">Reference types.</h4>
+<pre><code class="language-C">v_type_ptr v_reference_type(v_type_ptr elem, unsigned adsp);
+</code></pre>
+<p>These references are semantically alike to C++'s <code>&amp;</code> ones (with respect to LLVM's "address space").</p>
+<p>Reference can be seen as a pointer in a "superhero costume"...
+The "superpower" of reference is ability to <em>unreference</em> pointed value "on demand".</p>
+<h4 id="array-types">Array types.</h4>
+<pre><code class="language-C">v_type_ptr v_array_type(v_type_ptr elem, uint64_t length);
+</code></pre>
+<p>Ordinary LLVM's (and C's) arrays...</p>
+<h4 id="vector-types">Vector types.</h4>
+<pre><code class="language-C">v_type_ptr v_vector_type(v_type_ptr elem, unsigned size);           // ...
+v_type_ptr v_svector_type(v_type_ptr elem, unsigned size);          // Scalable
+</code></pre>
+<p>LLVM's vectors...</p>
+<h4 id="structure-types">Structure types.</h4>
+<pre><code class="language-C">v_type_ptr v_struct_type_named(const char *name);                           // Named (opaque)
+
+v_type_ptr v_struct_type(v_type_ptr *elts, unsigned count, bool packed);    // Unnamed
+
+void v_type_struct_set_body(v_type_ptr typ, v_type_ptr *elts, unsigned count, bool packed);
+</code></pre>
+<p>Similar to LLVM's struct types. Fields are unnamed, indexed by numbers...</p>
+<h4 id="function-types">Function types.</h4>
+<pre><code class="language-C">v_type_ptr v_function_type(v_type_ptr ret, v_type_ptr *par, unsigned count, bool vararg);
+</code></pre>
+<p>Similar to LLVM's (and C's) function types...</p>
+<h4 id="void-type">Void type.</h4>
+<pre><code class="language-C">v_type_ptr v_void_type();               // As is...
+</code></pre>
+<p>This type also predefined as <code>void</code>...</p>
+<h3 id="some-notes-on-datatypes-representation">Some notes on data/types representation ...</h3>
+<ul>
+<li>
+<p><code>'ю'</code> - character literals are of type <code>char32_t</code> which is the <code>v_uint_type(32)</code>.</p>
+</li>
+<li>
+<p>String literal represented as a (constant) <em>value</em> of type 'array of <code>char</code>', encoded in UTF-8, null-terminated.</p>
+</li>
+</ul>
+<pre><code>str = &quot;Hello world!\n&quot;;         // ... v_array_type(char, 14)
+</code></pre>
+<ul>
+<li>Such strings can be <em>promoted</em> to pointers "on demand" (like in C):</li>
+</ul>
+<pre><code>str = &quot;world&quot;;
+
+printf(&quot;Hello %s!\n&quot;, str);
+</code></pre>
+<ul>
+<li>There's some kind of (C-like) <em>promotion</em> of arithmetic types...</li>
+</ul>
+<pre><code>printf(&quot;sqrt(2) = %g\n&quot;, sqrt(2));          // C's &quot;double sqrt(double)&quot;
+</code></pre>
+<h2 id="the-mainline-language">The Mainline Language.</h2>
+<p>The "Mainline Language" is obtained by applying a sequence of extensions,
+grouped in the form of so-called "levels". Each subsequent extension builds on the previous ones.</p>
+<p>You can imagine this development as a passage of a computer game.
+The main character is, in fact, our “Language”.
+At the beginning, he has the “rank” of “Starter” and can do almost nothing.
+But during the game, our hero goes through a whole series of “adventures”
+and acquires new skills and abilities.
+And at some point it reaches the “rank” of “Mainline”...</p>
+<p>In addition to “levels” there will also be “versions” and they should not be confused.
+Versions refer to the "game" as a whole.
+The “game” itself will “evolve” from version to version.
+The levels will change (slightly) and new levels will be added...</p>
+<p>There are no versions in our project yet, but at some point they will inevitably appear...</p>
+<h3 id="how-to-turn-on-mainline-language">How to "turn on" Mainline Language.</h3>
+<p>The simplest (but not the only) way is to place these two units at the beginning of the source file:</p>
+<pre><code>{ v_import(&quot;mainline.void&quot;); }      // Import the Mainline Language
+{ v_enable_mainline(); }            // &quot;Enable&quot; it
+</code></pre>
+<p>The first unit imports all the necessary tools for the Mainline Language to work,
+but the current language <strong>does not change</strong>.
+The import process will compile quite a lot of code for the first time,
+which can take quite a long time.
+But subsequent imports will be significantly faster thanks to "pre-<em>compilation</em>" (Python style)...</p>
+<p>The second unit calls the <code>v_enable_mainline</code> function, imported from <code>mainline.void</code>.
+This function "enables" all the tools of the Mainline Language:</p>
+<ul>
+<li>Changes the grammar (and parser).</li>
+<li>Adds new “node types” to the AST hierarchy.</li>
+<li>"Teaches" the compiler to work with these new types of AST nodes.</li>
+</ul>
+<p>As a result, immediately after the second unit (right after its <code>}</code>)
+the “new compiler” of Mainline Language starts working, which allows you to use all the new features...</p>
+<h3 id="the-most-important-innovations">The <em>most</em> important innovations:</h3>
+<ul>
+<li>A new kind of units containing a set of definitions/declarations.</li>
+<li>A new kind of “statements” - definitions and declarations.</li>
+</ul>
+<p>Example (assuming Mainline Language is already enabled):</p>
+<pre><code>// ...
+// Unit of definitions/declarations:
+
+double = float(64);             // Kinda, &quot;typedef&quot;
+
+ceil: (double) ~&gt; double;       // Declarations...
+sqrt: (double) ~&gt; double;
+
+printf: (*const char, ...) ~&gt; int;          // Good old printf...
+
+S = 1000;                       // Size of sieve - constant, int type
+
+sieve: &amp;bool[S] := 0;           // Mutable array of bool, zero initialized
+
+// &quot;Usual&quot; unit:
+{
+    sieve[2] := true;           // Assignment ...
+
+    for (i: &amp;int := 3; i &lt; S; i += 2)   sieve[i] := true;
+
+    R = (ceil(sqrt(S)) : int);      // ... cast ...
+
+    for (i: &amp;int := 3; i &lt; R; i += 2)
+    {
+        if (!sieve[i])  v_continue();
+
+        for (k: &amp;int := i*i, i2 = 2*i; k &lt; S; k += i2)
+        {
+            sieve[k] := false;
+        }
+    }
+
+    for (i: &amp;int := 0; i &lt; S; ++i)
+    {
+        if (sieve[i])  printf(&quot;%d\n&quot;, i);
+    }
+}
+</code></pre>
+<p>In this example you can see two units:</p>
+<ul>
+<li>The first, in a new format, contains definitions and declarations.</li>
+<li>The second, in familiar braces, contains many new constructions...</li>
+</ul>
+<p>New kind units usually occupy all the space between two "traditional" units
+and must contain at least one definition or declaration.
+Let's see what we have there:</p>
+<ul>
+<li>Definition of the type <code>double</code>, in a familiar style. And yes, we now have type expression syntax!</li>
+<li>Declarations of some C functions. In a "mathematical" style.
+The <code>~&gt;</code> operator "hints" that these are <em>imperative</em> functions.
+Parentheses around the parameter list are mandatory.</li>
+<li>Definition of an integer constant. The default type is <code>int</code>.
+If you need something else, please indicate explicitly, for example: <code>Sz: size_t = 65536;</code></li>
+<li>Definition of a <strong>mutable</strong> variable. The type must be <em>reference</em>. The <code>:=</code> operator means initialization.
+If you omit the initialization and leave only the type, you get a <em>declaration</em>...</li>
+</ul>
+<p>All the above definitions/declarations are <em>global</em> and are visible in all subsequent units.
+The order is important! Every identifier must be defined or declared before it can be used.</p>
+<p>Now let's see what's interesting in the second unit:</p>
+<ul>
+<li>
+<p>Expressions in C style with some features:</p>
+<ul>
+<li>The assignment operator symbol looks like <code>:=</code> (same as initialization).</li>
+<li>The cast operator looks like <code>( &lt;value&gt; : &lt;type&gt; )</code>. Parentheses are mandatory.</li>
+<li>For other details of the expressions, see below...</li>
+</ul>
+</li>
+<li>
+<p>C-style flow control constructs:</p>
+<ul>
+<li><code>for</code> loop with some C++ style tricks. Quite familiar <code>if</code>...</li>
+<li><code>v_continue()</code> looks a little unusual, but is quite recognizable.</li>
+<li>More details on flow control below...</li>
+</ul>
+</li>
+</ul>
+<h3 id="definitions-and-declarations">Definitions and declarations.</h3>
+<p>These "statements" are of two kinds:</p>
+<h4 id="definitions"><em>Definitions</em>.</h4>
+<p>Usually contains <code>=</code> or <code>:=</code> operators.</p>
+<h5 id="defining-constants">Defining <em>constants</em>.</h5>
+<p>Syntax - <code>&lt;name&gt; : &lt;type&gt; = &lt;value&gt; ;</code> or the familiar <code>&lt;name&gt; = &lt;expression&gt; ;</code>:</p>
+<ul>
+<li><code>&lt;name&gt;</code> can be an identifier or a so-called <em>special identifier</em>.</li>
+<li><code>&lt;type&gt;</code> and <code>&lt;value&gt;</code> are usually <em>expressions</em>.</li>
+<li><code>&lt;expression&gt;</code> can denote a <em>type</em>.</li>
+</ul>
+<p>Example:</p>
+<pre><code>U = 'U';                                    // U : char32_t
+
+s = &quot;Hello World&quot;;                          // s : char[12]
+
+f = s[6] == U+2;                            // Same as  f = true;
+
+ss: (*const char)[] = { &quot;foo&quot;, s+6 };       // ss : (*const char)[2]
+
+tt = ss[f];                                 // tt : *const char
+
+{ printf(&quot;Hello %s!\n&quot;, tt); }              // ...
+</code></pre>
+<h5 id="defining-variables">Defining <em>variables</em>.</h5>
+<p>Syntax - <code>&lt;name&gt; : &lt;type&gt; := &lt;value&gt; ;</code>:</p>
+<ul>
+<li><code>&lt;name&gt;</code> is the usual identifier of a variable located in memory.</li>
+<li><code>&lt;type&gt;</code> is an expression that must denote a <em>reference</em> type.</li>
+<li>
+<p><code>&lt;value&gt;</code> is an expression that specifies the initial value. Special (universal) cases:</p>
+<ul>
+<li><code>0</code> - zero initialization.</li>
+<li><code>v_undef()</code> - the initial value is undefined.</li>
+</ul>
+</li>
+</ul>
+<p>Example:</p>
+<pre><code>i: &amp;int := 1;                               // Just int
+
+j: &amp;int[5] := { i+0, i+1, i+2, i+3, i+4 };  // Array of ints
+
+k: &amp;(*int)[3] := { j+0, j+1, j+2 };         // Array of pointers
+
+f = j[2] == 3;                              // Almost the same as  f = true;
+
+g = k[2] == &amp;j[2];                          // Almost the same as  g = true;
+</code></pre>
+<h5 id="defining-functions">Defining <em>functions</em>.</h5>
+<p>Syntax - <code>&lt;name&gt; : &lt;type&gt; { &lt;body&gt; }</code>:</p>
+<ul>
+<li><code>&lt;name&gt;</code> can be an identifier or a so-called <em>special identifier</em>.</li>
+<li><code>&lt;type&gt;</code> is an "expression" that must denote a <em>function</em> <em>proto</em>-type.</li>
+<li><code>&lt;body&gt;</code> - list of statements...</li>
+</ul>
+<p>Example:</p>
+<pre><code>multiply: (a: int, b: int) ~&gt; int           // By value
+{
+    v_return(a * b);                        // ...
+}
+</code></pre>
+<h5 id="defining-structunion-types-with-named-fields">Defining struct/union <em>types</em> with named fields.</h5>
+<p>Syntax (in EBNF-like notation):</p>
+<pre><code class="language-EBNF">... = (&quot;struct&quot;|&quot;union&quot;) [identifier] ['{' {[identifier ':'] expression ';'} '}'] ';'
+</code></pre>
+<p>Structures and unions are in many ways similar to C ones. See details below.</p>
+<p>Example:</p>
+<pre><code>struct FILE;            // Opaque structure
+
+struct Coords
+{
+    x: double;
+    y: double;
+};
+
+byte = uint(8);
+
+union IntRep
+{
+    i: int;
+    r: byte[0];
+};
+
+{   ir: &amp;IntRep := v_undef();
+
+    ir.i := 0xDEADBEEF;
+
+    for (i: &amp;int := 0; i &lt; int.sizeof; ++i)
+    {
+        printf(&quot;%02X &quot;, ir.r[i]);
+    }
+
+    printf(&quot;\n&quot;);
+}
+</code></pre>
+<h4 id="declarations"><em>Declarations</em>.</h4>
+<p>General syntax - <code>&lt;name&gt; : &lt;type&gt; ;</code>:</p>
+<ul>
+<li><code>&lt;name&gt;</code> can be an identifier or a so-called <em>special identifier</em>.</li>
+<li><code>&lt;type&gt;</code> is a type expression.</li>
+</ul>
+<p>Depending on what <code>&lt;type&gt;</code> is, different cases are possible...</p>
+<h5 id="function-declarations"><em>Function</em> declarations.</h5>
+<p><code>&lt;type&gt;</code> must be a function type.</p>
+<p>Example:</p>
+<pre><code>qsort: (ptr: *void, cn: size_t, sz: size_t, cmp: *((*const void, *const void) ~&gt; int)) ~&gt; void;
+
+compare: (a: *const void, b: *const void) ~&gt; int
+{
+    a = *(a: *const int);
+    b = *(b: *const int);
+
+    v_return(a - b);
+}
+
+{   ints: &amp;int[] := { 0, 4, 2, 3, 1 };
+
+    qsort(ints, 5, int.sizeof, compare);
+
+    for (i: &amp;int := 0; i &lt; 5; ++i)  printf(&quot;%d &quot;, ints[i]);
+
+    printf(&quot;\n&quot;);
+}
+</code></pre>
+<h5 id="variable-declarations"><em>Variable</em> declarations.</h5>
+<p><code>&lt;type&gt;</code> must be a reference type.</p>
+<p>Example:</p>
+<pre><code>struct FILE;                    // Definition of opaque structure type
+
+stdin:  &amp;*FILE;                 // Declarations of C's stdio streams
+stdout: &amp;*FILE;                 // ...
+stderr: &amp;*FILE;                 // ...
+
+fprintf: (*FILE, *const char, ...) ~&gt; int;
+
+(_.printf()) = fprintf;         // Definition of a &quot;special identifier&quot; for fprintf.
+
+{   fprintf(stdout, &quot;Hello!\n&quot;);
+
+    stdout.printf(&quot;Hello %s...\n&quot;, &quot;again&quot;);
+}
+</code></pre>
+<h5 id="constant-declarations"><em>Constant</em> declarations.</h5>
+<p>For now (Dec 2023) this is a <em>very</em> experimental case...</p>
+<p>...</p>
+<h3 id="expressions">Expressions.</h3>
+<p>...</p>
+<h6 id="to-be-continued">To be continued...</h6>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>

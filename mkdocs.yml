@@ -6,5 +6,6 @@ theme:
 
 nav:
   - Welcome to MkDocs: index.md
-
+  - Readme: README.md
+  - Tutorial: tutorial.md
 

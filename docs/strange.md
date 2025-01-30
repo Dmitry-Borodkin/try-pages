@@ -7,7 +7,7 @@
 Void is an open-source, highly extensible programming language, minimalistic and low-level in its base.
 It uses LLVM for code generation and can be seen as a thin (well, in some sense) shell around it.
 Extensibility of Void is practically limitless (any syntax/semantics),
-restricted only by decidability and ~your money~ imagination.
+restricted only by decidability and ~~your money~~ imagination.
 
 
 Here is the author's blog dedicated to this project: [Void Blog](https://github.com/Dmitry-Borodkin/void_blog).

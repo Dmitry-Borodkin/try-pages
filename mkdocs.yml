@@ -3,6 +3,12 @@ site_url: https://dmitry-borodkin.github.io/try-pages
 
 theme:
   name: material
+  palette:
+    primary: white
+
+markdown_extensions:
+  - pymdownx.tilde
+  - pymdownx.emoji
 
 nav:
   - Welcome to MkDocs: index.md

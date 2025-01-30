@@ -34,9 +34,9 @@ greeting message as an argument.
 
 **Essential Note:** it is very important to understand the consequences of this
 *parse-compile-execute* architecture of the Voidc's "mainloop"...
-It's the key to ~enormous~ extensibility of the Void as a language.
+It's the key to ~~enormous~~ extensibility of the Void as a language.
 Each unit can change compiler's state into "something completely different"(c)...
-This feature intendend to be seen as the ~back~door to the compiler.
+This feature intendend to be seen as the ~~back~~ door to the compiler.
 You just open the curly brace and enter the compiler as your workshop...
 This is why these curly braces are *magic* :wink:.
 
@@ -151,22 +151,22 @@ expr = prim {"(" [expr {"," expr}] ")"}
 prim = ident | integer | string | char
 ```
 
-- Identifiers are C's: `[a-zA-Z_][a-zA-Z_0-9]*`, case-sensitive.
-- Integers only decimal, optionaly signed, without leading zeros.
-- Strings and chars similiar to C's, with some "restrictions":
-  - Strings are NOT "auto-concatenable".
-  - Escapes limited only to `\t`, `\n`, `\r`, `\'`, `\"` and `\\`.
-  - Any other valid non-null Unicode Code Points are *allowed*.
+  - Identifiers are C's: `[a-zA-Z_][a-zA-Z_0-9]*`, case-sensitive.
+  - Integers only decimal, optionaly signed, without leading zeros.
+  - Strings and chars similiar to C's, with some "restrictions":
+    - Strings are NOT "auto-concatenable".
+    - Escapes limited only to `\t`, `\n`, `\r`, `\'`, `\"` and `\\`.
+    - Any other valid non-null Unicode Code Points are *allowed*.
 
 So, as you can see, the Starter Language is rather limited:
 
-- There are no keywords.
-- There are no operators.
-- There is no arithmetic.
-- There is no flow control.
-- There is no preprocessor.
-- There are no floating-point, hexadecimal, octal or binary literals.
-- Etc, etc, etc ...
+  - There are no keywords.
+  - There are no operators.
+  - There is no arithmetic.
+  - There is no flow control.
+  - There is no preprocessor.
+  - There are no floating-point, hexadecimal, octal or binary literals.
+  - Etc, etc, etc ...
 
 How the hell it is possible to program in it?
 

@@ -10,7 +10,7 @@ mkdocs.yml                                                     │mkdocs.yml
                                                                │
                                                                │
 ───────────────────────────────────────────────────────────────│
-.gitignore                                                     │.gitignore
+.hgignore                                                      │.hgignore
                                                                │
 ───────────────────────────────────────────────────────────────│
 micros.incdirs                                                 │micros.incdirs

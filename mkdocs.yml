@@ -5,6 +5,8 @@ theme:
   name: material
   palette:
     primary: white
+  features:
+    - navigation.tabs
 
 markdown_extensions:
   - pymdownx.tilde
@@ -12,6 +14,8 @@ markdown_extensions:
 
 nav:
   - Welcome to MkDocs: index.md
-  - Strange: strange.md
-  - Tutorial: tutorial.md
+  - Strange:
+    - strange.md
+  - Tutorial:
+    - tutorial.md
 

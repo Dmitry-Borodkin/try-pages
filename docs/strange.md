@@ -80,27 +80,27 @@ For the moment (Sep 2024), language seems to be ready just for some early experi
 { v_enable_mainline(); }            // "Enable" it
 
 //---------------------------------------------------------------------
-num_t = uint(1024);                 // 1024 bits, unsigned
-
-check_fruits: (a: &num_t, b: &num_t, c: &num_t) ~> bool     // By reference
-{
-    ab = a + b;     ac = a + c;     bc = b + c;
-
-    v_return(a*ab*ac + b*ab*bc + c*ac*bc == 4*ab*ac*bc);
-}
-
-//---------------------------------------------------------------------
 // Constants
 
-A: num_t = 154476802108746166441951315019919837485664325669565431700026634898253202035277999;
-B: num_t =  36875131794129999827197811565225474825492979968971970996283137471637224634055579;
-C: num_t =   4373612677928697257861252602371390152816537558161613618621437993378423467772036;
+A = 154476802108746166441951315019919837485664325669565431700026634898253202035277999;
+B =  36875131794129999827197811565225474825492979968971970996283137471637224634055579;
+C =   4373612677928697257861252602371390152816537558161613618621437993378423467772036;
 
 //---------------------------------------------------------------------
-{   printf: (*const char, ...) ~> int;              // Declaration
+{   num_t = uint(800);          // Kinda, typedef: 800 bits, unsigned
 
-    if (check_fruits(A, B, C))  printf("\nOK\n");
-    else                        printf("\nFail\n");
+    #define check_fruits: (a: num_t, b: num_t, c: num_t)  =     // Macro
+    {
+        ab = a + b;     ac = a + c;     bc = b + c;
+
+        a*ab*ac + b*ab*bc + c*ac*bc == 4*ab*ac*bc
+    };
+
+    printf: (*const char, ...) ~> int;                  // Declaration
+
+    #if (check_fruits(A, B, C)) printf("\nOK\n");       // Conditional
+    #else                       printf("\nFail\n");     // compilation
+    #endif                                              // ...
 }
 ```
 

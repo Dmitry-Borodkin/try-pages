@@ -1,0 +1,4 @@
+INHERIT: try-pages.yml
+
+site_url: https://voidc-lab.gitlab.io/try-pages
+

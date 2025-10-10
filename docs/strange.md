@@ -164,7 +164,7 @@ sieve = new bool[S];    defer delete[] sieve;
         {
             ++n;
 
-            if (n == N) v_break();
+            if (n == N) break;
         }
     }
 

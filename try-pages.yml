@@ -11,6 +11,18 @@ markdown_extensions:
   - pymdownx.tilde
   - pymdownx.emoji
 
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+exclude_docs: |
+  micros.dir
+
 nav:
   - Welcome to MkDocs: index.md
   - Strange:

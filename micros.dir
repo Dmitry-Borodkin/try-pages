@@ -1,20 +1,20 @@
                          ****  ?  ****                         │*
                                                                │
-                                                               │
+docs/                                                          │docs/micros.dir
                                                                │
                                                                │
 ───────────────────────────────────────────────────────────────│
-try-pages.yml                                                  │try-pages.yml
+try-pages.yml                                           The... │try-pages.yml
                                                                │
                                                                │
 ---------------------------------------------------------------│
-mkdocs.yml                                                     │mkdocs.yml
+mkdocs.yml                                              GitHub │mkdocs.yml
                                                                │
 .github/workflows/ci.yml                                       │.github/workflows/ci.yml
                                                                │
                                                                │
 ---------------------------------------------------------------│
-mkdocs-gitlab.yml                                              │mkdocs-gitlab.yml
+mkdocs-gitlab.yml                                       GitLab │mkdocs-gitlab.yml
                                                                │
 .gitlab-ci.yml                                                 │.gitlab-ci.yml
                                                                │

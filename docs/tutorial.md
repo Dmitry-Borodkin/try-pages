@@ -46,7 +46,7 @@ This is why these curly braces are *magic* :wink:.
 Let's try to dig a bit deeper and see how it's possible to declare `printf`
 "from scratch", without any *imports*...
 
-```
+``` linenums="1"
 // Unit 1: declaration of the v_pointer_type
 {
     typ0 = v_alloca(v_type_ptr, 2);     // Allocate "array" for two types
@@ -96,18 +96,56 @@ As is often the case in programming, it is best to read it *sdrawkcab*:
 - The last statement of the unit calls the function `v_add_symbol` to "declare" the `v_pointer_type` function.
   The term "symbol" here denotes a symbol in the terminology of (JIT's) linker.
 
+``` linenums="14"
+    v_add_symbol("v_pointer_type",      // Symbol name  (function name)
+                 ft,                    // Symbol type  (function type)
+                 0);                    // Symbol value (none - just declaration)
+```
+
 - The last but one statement builds the type of the `v_pointer_type` function.
+
+``` linenums="9"
+    ft = v_function_type(v_type_ptr,    // Return type
+                         typ0,          // Argument types
+                         2,             // Number of arguments
+                         false);        // VarArgs? (not)
+```
 
 - The previous pair of statements (containing `v_store`) form the list of argument types for the `v_pointer_type` function.
 
+``` linenums="6"
+    v_store(v_type_ptr, typ0);          // Argument 1: element type
+    v_store(unsigned,   typ1);          // Argument 2: address space
+```
+
 - And "finally", the first couple of statements prepare the memory (in stack) for the list of argument types.
+
+``` linenums="3"
+    typ0 = v_alloca(v_type_ptr, 2);     // Allocate "array" for two types
+    typ1 = v_getelementptr(typ0, 1);    // Get pointer to the second element
+```
 
 Many important details have been omitted for brevity...
 
 The second unit, in similiar way as the first one, declares the `printf` function.
 Note the use of the `v_pointer_type` function.
 
+``` linenums="21"
+    typ = v_alloca(v_type_ptr);
+
+    char_ptr = v_pointer_type(char, 0);
+
+    v_store(char_ptr, typ);             // Format string
+
+    ft = v_function_type(int, typ, 1, true);
+    v_add_symbol("printf", ft, 0);
+```
+
 The third unit just calls the `printf`...
+
+``` linenums="33"
+    printf("Hello, world\n");
+```
 
 
 ## Language syntax (and semantics).
@@ -483,7 +521,7 @@ sieve: &bool[S] := 0;           // Mutable array of bool, zero initialized
 
     for (i: &int := 3; i < R; i += 2)
     {
-        if (!sieve[i])  v_continue();
+        if (!sieve[i])  continue;
 
         for (k: &int := i*i, i2 = 2*i; k < S; k += i2)
         {
@@ -604,7 +642,7 @@ Example:
 ```
 multiply: (a: int, b: int) ~> int           // By value
 {
-    v_return(a * b);                        // ...
+    return  a * b;                          // ...
 }
 ```
 
@@ -674,7 +712,7 @@ compare: (a: *const void, b: *const void) ~> int
     a = *(a: *const int);
     b = *(b: *const int);
 
-    v_return(a - b);
+    return  a - b;
 }
 
 {   ints: &int[] := { 0, 4, 2, 3, 1 };

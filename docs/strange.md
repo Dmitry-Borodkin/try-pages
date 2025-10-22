@@ -2,11 +2,11 @@
 
 # The Void Programming Language
 
-*<p align='right'>"Programming language is not a templum, it's a workshop." (c)...</p>*
+*<p align='right'>"A programming language is not a temple, but a workshop." (c)...</p>*
 
 Void is an open-source, highly extensible programming language, minimalistic and low-level in its base.
 It uses LLVM for code generation and can be seen as a thin (well, in some sense) shell around it.
-Extensibility of Void is practically limitless (any syntax/semantics),
+Extensibility of Void is practically limitless (*any* syntax/semantics),
 restricted only by decidability and ~~your money~~ imagination.
 
 
@@ -15,10 +15,10 @@ Here is the author's blog dedicated to this project: [Void Blog](https://github.
 
 #### Hello world:
 
-```C
-{   v_import("printf.void"); }      // Import declaration of C's "printf"
+```mycustom
+{ v_import("printf.void"); }        // Import declaration of C's "printf"
 
-{   printf("Hello, world\n"); }     // Just call it...
+{ printf("Hello, world\n"); }       // Just call it...
 ```
 
 See more details in [tutorial](doc/tutorial.md).
@@ -75,7 +75,7 @@ For the moment (Sep 2024), language seems to be ready just for some early experi
 
 #### Yet another example:
 
-```
+```mycustom
 { v_import("mainline.void"); }      // Import "mainline" language
 { v_enable_mainline(); }            // "Enable" it
 

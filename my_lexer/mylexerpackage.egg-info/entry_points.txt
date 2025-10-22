@@ -1,0 +1,2 @@
+[pygments.lexers]
+mycustomlexer = my_lexer.my_lexer:MyCustomLexer

@@ -6,12 +6,11 @@ theme:
     primary: white
   features:
     - navigation.tabs
+    - navigation.footer
 
 markdown_extensions:
   - pymdownx.tilde
   - pymdownx.emoji
-
-markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -19,6 +18,9 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+
+extra_css:
+  - stylesheets/extra.css
 
 exclude_docs: |
   micros.dir

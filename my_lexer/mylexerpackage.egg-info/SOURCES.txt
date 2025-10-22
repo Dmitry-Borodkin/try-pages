@@ -1,0 +1,8 @@
+setup.py
+my_lexer/__init__.py
+my_lexer/my_lexer.py
+mylexerpackage.egg-info/PKG-INFO
+mylexerpackage.egg-info/SOURCES.txt
+mylexerpackage.egg-info/dependency_links.txt
+mylexerpackage.egg-info/entry_points.txt
+mylexerpackage.egg-info/top_level.txt

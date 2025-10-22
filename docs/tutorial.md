@@ -8,9 +8,9 @@ understands basic notions of LLVM-C API, and in general "has an idea of how comp
 ### The "Hello, world" example:
 
 ```
-{   v_import("printf.void"); }      // Import declaration of C's "printf"
+{ v_import("printf.void"); }        // Import declaration of C's "printf"
 
-{   printf("Hello, world\n"); }     // Just call it...
+{ printf("Hello, world\n"); }       // Just call it...
 ```
 
 Void's source text is a sequence of so-called "units".
@@ -60,9 +60,9 @@ Let's try to dig a bit deeper and see how it's possible to declare `printf`
                          2,             // Number of arguments
                          false);        // VarArgs? (not)
 
-    v_add_symbol("v_pointer_type",      // Symbol name  (function name)
-                 ft,                    // Symbol type  (function type)
-                 0);                    // Symbol value (none - just declaration)
+    v_add_symbol("v_pointer_type",      // Name
+                 ft,                    // Type
+                 0);                    // Value (none - just declaration)
 }
 
 // Unit 2: declaration of the printf
@@ -97,9 +97,9 @@ As is often the case in programming, it is best to read it *sdrawkcab*:
   The term "symbol" here denotes a symbol in the terminology of (JIT's) linker.
 
 ``` linenums="14"
-    v_add_symbol("v_pointer_type",      // Symbol name  (function name)
-                 ft,                    // Symbol type  (function type)
-                 0);                    // Symbol value (none - just declaration)
+    v_add_symbol("v_pointer_type",      // Name
+                 ft,                    // Type
+                 0);                    // Value (none - just declaration)
 ```
 
 - The last but one statement builds the type of the `v_pointer_type` function.

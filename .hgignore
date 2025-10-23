@@ -4,3 +4,9 @@ syntax: glob
 
 .venv/**
 
+**/__pycache__
+**/__pycache__/**
+
+**/*.egg-info
+**/*.egg-info/**
+

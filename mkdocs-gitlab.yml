@@ -2,3 +2,7 @@ INHERIT: try-pages.yml
 
 site_url: https://borodkin.dn.gitlab.io/try-pages
 
+extra:
+  voidc_repo_url: https://gitlab.com/voidc-lab/voidc/-/blob/master
+
+

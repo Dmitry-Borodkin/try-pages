@@ -25,5 +25,6 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install -e my_lexer
+      - run: pip install mkdocs-macros-plugin
       - run: pip install mkdocs-material
       - run: mkdocs gh-deploy --force

@@ -156,10 +156,10 @@ Then the language is *developed*, and this development is organized into so-call
 
 For the moment (Nov 2023) there are four levels:
 
-  - [Level 0.0](../level-00/README.md) - "Starter Language" and compiler API.
-  - [Level 0.1](../level-01/README.md) - Control flow, grammars, expressions and declarations/definitions.
-  - [Level 0.2](../level-02/README.md) - "C on steroids"...
-  - [Level 0.3](../level-03/README.md) - Kinda, objects...
+  - [Level 0.0]({{voidc_repo_url}}/compiler/import/level-00/README.md) - "Starter Language" and compiler API.
+  - [Level 0.1]({{voidc_repo_url}}/compiler/import/level-01/README.md) - Control flow, grammars, expressions and declarations/definitions.
+  - [Level 0.2]({{voidc_repo_url}}/compiler/import/level-02/README.md) - "C on steroids"...
+  - [Level 0.3]({{voidc_repo_url}}/compiler/import/level-03/README.md) - Kinda, objects...
 
 All these levels together form the so-called "Mainline Language".
 
@@ -208,7 +208,7 @@ So, as you can see, the Starter Language is rather limited:
 
 How the hell it is possible to program in it?
 
-Well... To get an idea you can check the ["hello_jit.void"](../hello_jit.void) example.
+Well... To get an idea you can check the ["hello_jit.void"]({{voidc_repo_url}}/hello_jit.void) example.
 
 In Void you *must* "write program to write program"(c)...
 

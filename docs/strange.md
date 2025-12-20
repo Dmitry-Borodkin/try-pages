@@ -1,4 +1,4 @@
-![Black Square](./doc/img/black_square.png)
+![Black Square](img/black_square.png)
 
 # The Void Programming Language
 
@@ -21,7 +21,7 @@ Here is the author's blog dedicated to this project: [Void Blog](https://github.
 { printf("Hello, world\n"); }       // Just call it...
 ```
 
-See more details in [tutorial](doc/tutorial.md).
+See more details in [tutorial]({{voidc_repo_url}}/doc/tutorial.md).
 (Spoiler: it's all about those *magic curly braces*... :wink:)
 
 

@@ -3,6 +3,7 @@ pages:
   image: python:latest
   script:
     - pip install -e my_lexer
+    - pip install mkdocs-macros-plugin
     - pip install mkdocs-material
     - mkdocs build -f mkdocs-gitlab.yml --site-dir public
   cache:

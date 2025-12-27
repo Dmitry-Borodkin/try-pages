@@ -7,7 +7,7 @@ understands basic notions of LLVM-C API, and in general "has an idea of how comp
 
 ### The "Hello, world" example:
 
-```
+```void
 { v_import("printf.void"); }        // Import declaration of C's "printf"
 
 { printf("Hello, world\n"); }       // Just call it...
@@ -46,7 +46,7 @@ This is why these curly braces are *magic* :wink:.
 Let's try to dig a bit deeper and see how it's possible to declare `printf`
 "from scratch", without any *imports*...
 
-``` linenums="1"
+```void linenums="1"
 // Unit 1: declaration of the v_pointer_type
 {
     typ0 = v_alloca(v_type_ptr, 2);     // Allocate "array" for two types
@@ -96,7 +96,7 @@ As is often the case in programming, it is best to read it *sdrawkcab*:
 - The last statement of the unit calls the function `v_add_symbol` to "declare" the `v_pointer_type` function.
   The term "symbol" here denotes a symbol in the terminology of (JIT's) linker.
 
-``` linenums="14"
+```void linenums="14"
     v_add_symbol("v_pointer_type",      // Name
                  ft,                    // Type
                  0);                    // Value (none - just declaration)
@@ -104,7 +104,7 @@ As is often the case in programming, it is best to read it *sdrawkcab*:
 
 - The last but one statement builds the type of the `v_pointer_type` function.
 
-``` linenums="9"
+```void linenums="9"
     ft = v_function_type(v_type_ptr,    // Return type
                          typ0,          // Argument types
                          2,             // Number of arguments
@@ -113,14 +113,14 @@ As is often the case in programming, it is best to read it *sdrawkcab*:
 
 - The previous pair of statements (containing `v_store`) form the list of argument types for the `v_pointer_type` function.
 
-``` linenums="6"
+```void linenums="6"
     v_store(v_type_ptr, typ0);          // Argument 1: element type
     v_store(unsigned,   typ1);          // Argument 2: address space
 ```
 
 - And "finally", the first couple of statements prepare the memory (in stack) for the list of argument types.
 
-``` linenums="3"
+```void linenums="3"
     typ0 = v_alloca(v_type_ptr, 2);     // Allocate "array" for two types
     typ1 = v_getelementptr(typ0, 1);    // Get pointer to the second element
 ```
@@ -130,7 +130,7 @@ Many important details have been omitted for brevity...
 The second unit, in similiar way as the first one, declares the `printf` function.
 Note the use of the `v_pointer_type` function.
 
-``` linenums="21"
+```void linenums="21"
     typ = v_alloca(v_type_ptr);
 
     char_ptr = v_pointer_type(char, 0);
@@ -143,7 +143,7 @@ Note the use of the `v_pointer_type` function.
 
 The third unit just calls the `printf`...
 
-``` linenums="33"
+```void linenums="33"
     printf("Hello, world\n");
 ```
 
@@ -214,7 +214,7 @@ In Void you *must* "write program to write program"(c)...
 
 All the Starter Language really allows is to call functions. Sequentially.
 
-```
+```void
 printf("Hello!\n");
 printf("Hello again!\n");
 printf("Hello one more time!\n");
@@ -222,19 +222,19 @@ printf("Hello one more time!\n");
 
 Function calls can be nested and "curried" (like in C).
 
-```
+```void
 foo(bar("Hi", 42), 'Ы')(1, 2, 3)(-7);
 ```
 
 What a function returns can be "named" by an identifier.
 
-```
+```void
 n = strlen("Some string");
 ```
 
 These identifiers can be used in subsequent statements.
 
-```
+```void
 C = 'Ъ';
 
 printf("Cyrillic Capital Letter Hard Sign: %d\n", C);
@@ -242,7 +242,7 @@ printf("Cyrillic Capital Letter Hard Sign: %d\n", C);
 
 Identifiers also can be "shadowed" by subsequent "renamings" (like in Rust).
 
-```
+```void
 u = "1";
 u = atof(u);
 
@@ -424,13 +424,13 @@ This type also predefined as `void`...
 
 - String literal represented as a (constant) *value* of type 'array of `char`', encoded in UTF-8, null-terminated.
 
-```
+```void
 str = "Hello world!\n";         // ... v_array_type(char, 14)
 ```
 
 - Such strings can be *promoted* to pointers "on demand" (like in C):
 
-```
+```void
 str = "world";
 
 printf("Hello %s!\n", str);
@@ -438,7 +438,7 @@ printf("Hello %s!\n", str);
 
 - There's some kind of (C-like) *promotion* of arithmetic types...
 
-```
+```void
 printf("sqrt(2) = %g\n", sqrt(2));          // C's "double sqrt(double)"
 ```
 
@@ -466,7 +466,7 @@ There are no versions in our project yet, but at some point they will inevitably
 
 The simplest (but not the only) way is to place these two units at the beginning of the source file:
 
-```
+```void
 { v_import("mainline.void"); }      // Import the Mainline Language
 { v_enable_mainline(); }            // "Enable" it
 ```
@@ -496,7 +496,7 @@ the “new compiler” of Mainline Language starts working, which allows you to 
 Example (assuming Mainline Language is already enabled):
 
 
-```
+```void
 // ...
 // Unit of definitions/declarations:
 
@@ -590,7 +590,7 @@ Syntax - `<name> : <type> = <value> ;` or the familiar `<name> = <expression> ;`
 
 Example:
 
-```
+```void
 U = 'U';                                    // U : char32_t
 
 s = "Hello World";                          // s : char[12]
@@ -617,7 +617,7 @@ Syntax - `<name> : <type> := <value> ;`:
 
 Example:
 
-```
+```void
 i: &int := 1;                               // Just int
 
 j: &int[5] := { i+0, i+1, i+2, i+3, i+4 };  // Array of ints
@@ -639,7 +639,7 @@ Syntax - `<name> : <type> { <body> }`:
 
 Example:
 
-```
+```void
 multiply: (a: int, b: int) ~> int           // By value
 {
     return  a * b;                          // ...
@@ -658,7 +658,7 @@ Structures and unions are in many ways similar to C ones. See details below.
 
 Example:
 
-```
+```void
 struct FILE;            // Opaque structure
 
 struct Coords
@@ -704,7 +704,7 @@ Depending on what `<type>` is, different cases are possible...
 
 Example:
 
-```
+```void
 qsort: (ptr: *void, cn: size_t, sz: size_t, cmp: *((*const void, *const void) ~> int)) ~> void;
 
 compare: (a: *const void, b: *const void) ~> int
@@ -731,7 +731,7 @@ compare: (a: *const void, b: *const void) ~> int
 
 Example:
 
-```
+```void
 struct FILE;                    // Definition of opaque structure type
 
 stdin:  &*FILE;                 // Declarations of C's stdio streams

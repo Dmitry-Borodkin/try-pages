@@ -139,9 +139,9 @@ sieve = new bool[S];    defer delete[] sieve;
     {
         sieve[i] := true;
     }
-"""
+
     R = (ceil(sqrt(S)) : int);
-"""
+
     for (i: &int := 3; i < R; i += 2)
     {
         if (sieve[i])

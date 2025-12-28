@@ -613,7 +613,7 @@ Syntax - `<name> : <type> := <value> ;`:
 - `<value>` is an expression that specifies the initial value. Special (universal) cases:
 
     - `0` - zero initialization.
-    - `v_undef()` - the initial value is undefined.
+    - `undef` - the initial value is undefined.
 
 Example:
 
@@ -675,7 +675,7 @@ union IntRep
     r: byte[0];
 };
 
-{   ir: &IntRep := v_undef();
+{   ir: &IntRep := undef;
 
     ir.i := 0xDEADBEEF;
 

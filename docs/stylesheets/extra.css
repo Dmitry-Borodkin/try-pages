@@ -1,4 +1,4 @@
-:root > * {
+:root [data-md-color-scheme="default"] > * {
   --md-footer-fg-color: #000000;
   --md-footer-fg-color--light: #080808;
   --md-footer-fg-color--lighter: #101010;

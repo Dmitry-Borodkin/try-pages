@@ -2,11 +2,26 @@ site_name: Try Pages
 
 theme:
   name: material
+
   palette:
-    primary: white
+    # Light mode
+    - scheme: default
+      primary: white
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+
+    # Dark mode
+    - scheme: slate
+      primary: black
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
   features:
     - navigation.tabs
     - navigation.footer
+
   logo: img/black_square.svg
   favicon: img/black_square.svg
 

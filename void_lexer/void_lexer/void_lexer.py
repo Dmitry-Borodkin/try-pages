@@ -49,6 +49,9 @@ class VoidLexer(RegexLexer):
             (r'"', String, 'string'),
             (r"'(\\[\\nrt\"']|[^\\'\"\n\r\t])'", String.Char),
 
+            (r"\{'[a-zA-Z_][a-zA-Z0-9_]*[^\n\r\t\']*'", Comment.Preproc),
+            (r"'[a-zA-Z_][a-zA-Z0-9_]*[^\n\r\t\']*'\}", Comment.Preproc),
+
             (r'//.*$', Comment.Single),
             (r'\s+', Text),                 # ?
             (r'.', Punctuation),            # ?

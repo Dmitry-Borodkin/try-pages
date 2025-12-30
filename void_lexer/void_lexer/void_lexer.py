@@ -61,8 +61,5 @@ class VoidLexer(RegexLexer):
             (r'\\[\\nrt"\']', String.Escape),
             (r'[^\\"\'\n\r\t]+', String),  # all other characters
         ],
-
-
-
     }
 

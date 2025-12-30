@@ -47,7 +47,7 @@ class VoidLexer(RegexLexer):
 
             (r'("""(?:.|\n)*?""")', String),
             (r'"', String, 'string'),
-            (r"'", String.Char, 'char'),
+            (r"'(\\[\\nrt\"']|[^\\'\"\n\r\t])'", String.Char),
 
             (r'//.*$', Comment.Single),
             (r'\s+', Text),                 # ?
@@ -57,11 +57,6 @@ class VoidLexer(RegexLexer):
             (r'"', String, '#pop'),
             (r'\\[\\nrt"\']', String.Escape),
             (r'[^\\"\'\n\r\t]+', String),  # all other characters
-        ],
-        'char': [
-            (r"'", String.Char, '#pop'),
-            (r"\\[\\nrt\"']", String.Escape),
-            (r"[^\\'\"\n\r\t]+", String.Char),  # all other characters
         ],
 
 

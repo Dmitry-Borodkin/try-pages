@@ -31,19 +31,33 @@ class VoidLexer(RegexLexer):
             (r'(v|voidc)_[a-zA-Z0-9_]+', Name.Builtin),
             (r'[a-zA-Z_][a-zA-Z0-9_]*', Name),
 
-            (r'[-+]?0[xX](' + _hex_digits + r'\.' + _hex_digits + r'|\.' + _hex_digits +
+            (r'0[xX](' + _hex_digits + r'\.' + _hex_digits + r'|\.' + _hex_digits +
              r'|' + _hex_digits + r')[pP][+-]?' + _dec_digits + _real_suffix, Number.Float),
 
-            (r'[-+]?(' + _dec_digits + r'\.' + _dec_digits + r'|\.' + _dec_digits + r'|' +
+            (r'(' + _dec_digits + r'\.' + _dec_digits + r'|\.' + _dec_digits + r'|' +
              _dec_digits + r')[eE][+-]?' + _dec_digits + _real_suffix, Number.Float),
 
-            (r'[-+]?((' + _dec_digits + r'\.(' + _dec_digits + r')?|\.' +
+            (r'((' + _dec_digits + r'\.(' + _dec_digits + r')?|\.' +
              _dec_digits + r')' + _real_suffix + r')|(' + _dec_digits + r'[fF]([1-9][0-9]*)?)', Number.Float),
 
-            (r'[-+]?0[xX]' + _hex_digits + _int_suffix, Number.Hex),
-            (r'[-+]?0[bB]' + _bin_digits + _int_suffix, Number.Bin),
-            (r'[-+]?0(\'?[0-7])*'        + _int_suffix, Number.Oct),
-            (r'[-+]?'      + _dec_digits + _int_suffix, Number.Integer),
+            (r'0[xX]' + _hex_digits + _int_suffix, Number.Hex),
+            (r'0[bB]' + _bin_digits + _int_suffix, Number.Bin),
+            (r'0(\'?[0-7])+'        + _int_suffix, Number.Oct),
+            (           _dec_digits + _int_suffix, Number.Integer),
+
+#            (r'[-+]?0[xX](' + _hex_digits + r'\.' + _hex_digits + r'|\.' + _hex_digits +
+#             r'|' + _hex_digits + r')[pP][+-]?' + _dec_digits + _real_suffix, Number.Float),
+#
+#            (r'[-+]?(' + _dec_digits + r'\.' + _dec_digits + r'|\.' + _dec_digits + r'|' +
+#             _dec_digits + r')[eE][+-]?' + _dec_digits + _real_suffix, Number.Float),
+#
+#            (r'[-+]?((' + _dec_digits + r'\.(' + _dec_digits + r')?|\.' +
+#             _dec_digits + r')' + _real_suffix + r')|(' + _dec_digits + r'[fF]([1-9][0-9]*)?)', Number.Float),
+#
+#            (r'[-+]?0[xX]' + _hex_digits + _int_suffix, Number.Hex),
+#            (r'[-+]?0[bB]' + _bin_digits + _int_suffix, Number.Bin),
+#            (r'[-+]?0(\'?[0-7])*'        + _int_suffix, Number.Oct),
+#            (r'[-+]?'      + _dec_digits + _int_suffix, Number.Integer),
 
             (r'("""(?:.|\n)*?""")', String),
             (r'"', String, 'string'),

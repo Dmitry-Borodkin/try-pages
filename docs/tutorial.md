@@ -5,7 +5,7 @@
 understands basic notions of LLVM-C API, and in general "has an idea of how compilers work"...
 
 
-### The "Hello, world" example:
+### 0.1. The "Hello, world" example:
 
 ```void
 { v_import("printf.void"); }        // Import declaration of C's "printf"
@@ -41,7 +41,7 @@ You just open the curly brace and enter the compiler as your workshop...
 This is why these curly braces are *magic* :wink:.
 
 
-### The extended "Hello, world" example
+### 0.2. The extended "Hello, world" example
 
 Let's try to dig a bit deeper and see how it's possible to declare `printf`
 "from scratch", without any *imports*...
@@ -148,7 +148,7 @@ The third unit just calls the `printf`...
 ```
 
 
-## Language syntax (and semantics).
+## 1. Language syntax (and semantics).
 
 In fact, Void as a language *has no* fixed/constant/static syntax/semantics...
 Instead, it has a minimalist "starter language" and a set of "language development" tools.
@@ -167,9 +167,9 @@ First we'll go over the Starter Language a little. Just to feel "how it started"
 Then we'll take a closer look at the Mainline Language. To find out "how it's going"...
 
 
-## The Starter Language.
+## 2. The Starter Language.
 
-### Syntax (and a bit of semantics).
+### 2.1. Syntax (and a bit of semantics).
 
 - The `voidc` awaits source files properly encoded in UTF-8.
 - Parser works at a Unicode Code Point "granularity".
@@ -269,7 +269,7 @@ It just "sticks" a label with the identifier on the left to the value received o
 Also this is very similar to `<-` from the monadic "do" notation (in Haskell).
 
 
-### Not all functions are the same...
+### 2.2. Not all functions are the same...
 
 Let's look at [The extended "Hello, world" example](#the-extended-hello-world-example).
 In it's code there are several "function calls".
@@ -290,7 +290,7 @@ They can generate code "in their own way" and/or change the state of the compile
 *Ct-intrinsics* are the most widely used "language development" tools mentioned above.
 
 
-### Void's Reserved Names
+### 2.3. Void's Reserved Names
 
 Identifiers starting with `v_` and `voidc_` are reserved for the needs
 of the `voidc` compiler itself and the (future) standard library...
@@ -299,7 +299,7 @@ In addition, careless use of external identifiers starting with `_`, `LLVM`, etc
 can lead to collisions with the C/C++ and LLVM libraries.
 
 
-### The Void's Types.
+### 2.4. The Void's Types.
 
 Starter Language's typing can be described as *static* and *implicit*.
 This means that the identifier to the left of the `=` takes the type
@@ -317,7 +317,7 @@ As you can probably guessed, the name of the type of the Void's types representa
 Like `LLVMTypeRef`, `v_type_ptr` looks like a pointer to some opaque structure.
 
 
-#### Integer types.
+#### 2.4.1. Integer types.
 
 Void's integer types are all LLVM's ones with additional "attribute" of *signedness*.
 
@@ -337,7 +337,7 @@ Some of them: `char`, `short`, `int`, `unsigned`, `long`, `intptr_t` etc...
 Predefined type `bool` is the `v_uint_type(1)`. Named constants `false` and `true` have obvious type and values...
 
 
-#### Floating point types.
+#### 2.4.2. Floating point types.
 
 ```C
 v_type_ptr v_f16_type();            // LLVM's half
@@ -347,7 +347,7 @@ v_type_ptr v_f128_type();           // LLVM's fp128
 ```
 
 
-#### Pointer types.
+#### 2.4.3. Pointer types.
 
 ```C
 v_type_ptr v_pointer_type(v_type_ptr elem, unsigned adsp);
@@ -356,7 +356,7 @@ v_type_ptr v_pointer_type(v_type_ptr elem, unsigned adsp);
 These pointer types are similar to C's with respect to additional parameter of LLVM's "address space"...
 
 
-#### Reference types.
+#### 2.4.4. Reference types.
 
 ```C
 v_type_ptr v_reference_type(v_type_ptr elem, unsigned adsp);
@@ -368,7 +368,7 @@ Reference can be seen as a pointer in a "superhero costume"...
 The "superpower" of reference is ability to *unreference* pointed value "on demand".
 
 
-#### Array types.
+#### 2.4.5. Array types.
 
 ```C
 v_type_ptr v_array_type(v_type_ptr elem, uint64_t length);
@@ -377,7 +377,7 @@ v_type_ptr v_array_type(v_type_ptr elem, uint64_t length);
 Ordinary LLVM's (and C's) arrays...
 
 
-#### Vector types.
+#### 2.4.6. Vector types.
 
 ```C
 v_type_ptr v_vector_type(v_type_ptr elem, unsigned size);           // ...
@@ -387,7 +387,7 @@ v_type_ptr v_svector_type(v_type_ptr elem, unsigned size);          // Scalable
 LLVM's vectors...
 
 
-#### Structure types.
+#### 2.4.7. Structure types.
 
 ```C
 v_type_ptr v_struct_type_named(const char *name);                           // Named (opaque)
@@ -400,7 +400,7 @@ void v_type_struct_set_body(v_type_ptr typ, v_type_ptr *elts, unsigned count, bo
 Similar to LLVM's struct types. Fields are unnamed, indexed by numbers...
 
 
-#### Function types.
+#### 2.4.8. Function types.
 
 ```C
 v_type_ptr v_function_type(v_type_ptr ret, v_type_ptr *par, unsigned count, bool vararg);
@@ -409,7 +409,7 @@ v_type_ptr v_function_type(v_type_ptr ret, v_type_ptr *par, unsigned count, bool
 Similar to LLVM's (and C's) function types...
 
 
-#### Void type.
+#### 2.4.9. Void type.
 
 ```C
 v_type_ptr v_void_type();               // As is...
@@ -418,7 +418,7 @@ v_type_ptr v_void_type();               // As is...
 This type also predefined as `void`...
 
 
-### Some notes on data/types representation ...
+### 2.5. Some notes on data/types representation ...
 
 - `'ю'` - character literals are of type `char32_t` which is the `v_uint_type(32)`.
 
@@ -442,7 +442,7 @@ printf("Hello %s!\n", str);
 printf("sqrt(2) = %g\n", sqrt(2));          // C's "double sqrt(double)"
 ```
 
-## The Mainline Language.
+## 3. The Mainline Language.
 
 The "Mainline Language" is obtained by applying a sequence of extensions,
 grouped in the form of so-called "levels". Each subsequent extension builds on the previous ones.
@@ -462,7 +462,7 @@ The levels will change (slightly) and new levels will be added...
 There are no versions in our project yet, but at some point they will inevitably appear...
 
 
-### How to "turn on" Mainline Language.
+### 3.1. How to "turn on" Mainline Language.
 
 The simplest (but not the only) way is to place these two units at the beginning of the source file:
 
@@ -488,7 +488,7 @@ As a result, immediately after the second unit (right after its `}`)
 the “new compiler” of Mainline Language starts working, which allows you to use all the new features...
 
 
-### The *most* important innovations:
+### 3.2. The *most* important innovations:
 
 - A new kind of units containing a set of definitions/declarations.
 - A new kind of “statements” - definitions and declarations.
@@ -572,15 +572,15 @@ Now let's see what's interesting in the second unit:
     - More details on flow control below...
 
 
-### Definitions and declarations.
+### 3.3. Definitions and declarations.
 
 These "statements" are of two kinds:
 
-#### *Definitions*.
+#### 3.3.1. *Definitions*.
 
 Usually contains `=` or `:=` operators.
 
-##### Defining *constants*.
+##### 3.3.1.1. Defining *constants*.
 
 Syntax - `<name> : <type> = <value> ;` or the familiar `<name> = <expression> ;`:
 
@@ -604,7 +604,7 @@ tt = ss[f];                                 // tt : *const char
 { printf("Hello %s!\n", tt); }              // ...
 ```
 
-##### Defining *variables*.
+##### 3.3.1.2. Defining *variables*.
 
 Syntax - `<name> : <type> := <value> ;`:
 
@@ -629,7 +629,7 @@ f = j[2] == 3;                              // Almost the same as  f = true;
 g = k[2] == &j[2];                          // Almost the same as  g = true;
 ```
 
-##### Defining *functions*.
+##### 3.3.1.3. Defining *functions*.
 
 Syntax - `<name> : <type> { <body> }`:
 
@@ -646,7 +646,7 @@ multiply: (a: int, b: int) ~> int           // By value
 }
 ```
 
-##### Defining struct/union *types* with named fields.
+##### 3.3.1.4. Defining struct/union *types* with named fields.
 
 Syntax (in EBNF-like notation):
 
@@ -688,7 +688,7 @@ union IntRep
 }
 ```
 
-#### *Declarations*.
+#### 3.3.2. *Declarations*.
 
 General syntax - `<name> : <type> ;`:
 
@@ -698,7 +698,7 @@ General syntax - `<name> : <type> ;`:
 
 Depending on what `<type>` is, different cases are possible...
 
-##### *Function* declarations.
+##### 3.3.2.1. *Function* declarations.
 
 `<type>` must be a function type.
 
@@ -725,7 +725,7 @@ compare: (a: *const void, b: *const void) ~> int
 }
 ```
 
-##### *Variable* declarations.
+##### 3.3.2.2. *Variable* declarations.
 
 `<type>` must be a reference type.
 
@@ -748,14 +748,14 @@ fprintf: (*FILE, *const char, ...) ~> int;
 }
 ```
 
-##### *Constant* declarations.
+##### 3.3.2.3. *Constant* declarations.
 
 For now (Dec 2023) this is a *very* experimental case...
 
 ...
 
 
-### Expressions.
+### 3.4. Expressions.
 
 ...
 
@@ -766,26 +766,4 @@ For now (Dec 2023) this is a *very* experimental case...
 
 
 ---
-
-
-```void title="hello.void"
---8<-- "https://raw.githubusercontent.com/voidc-lab/voidc/refs/heads/master/hello.void"
-```
-
-```void title="macros_test.void"
---8<-- "https://gitlab.com/voidc-lab/voidc/-/raw/master/compiler/test/level-03/macros_test.void"
-```
-
-```void title="macros_mod_test.void"
---8<-- "https://gitlab.com/voidc-lab/voidc/-/raw/master/compiler/test/level-03/macros_mod_test.void"
-```
-
-```void title="geometry.void"
---8<-- "https://raw.githubusercontent.com/Dmitry-Borodkin/void_experiments/refs/heads/master/try_projects/polyhedra2d/geometry.void"
-```
-
-```void title="geometry_mod.void"
---8<-- "https://raw.githubusercontent.com/Dmitry-Borodkin/void_experiments/refs/heads/master/try_projects/polyhedra2d/geometry_mod.void"
-```
-
 

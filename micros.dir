@@ -30,6 +30,7 @@ Run mkdocs serve ...                                           │run_mkdocs
 ───────────────────────────────────────────────────────────────│
 .hgignore                                                      │.hgignore
                                                                │
+hg bookmark -f master                   WTF?                   │hg bookmark -f master
 ───────────────────────────────────────────────────────────────│
 micros.incdirs                                                 │micros.incdirs
                                                                │

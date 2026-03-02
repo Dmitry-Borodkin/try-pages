@@ -567,8 +567,8 @@ Now let's see what's interesting in the second unit:
 
 - C-style flow control constructs:
 
-    - `for` loop with some C++ style tricks. Quite familiar `if`...
-    - `v_continue()` looks a little unusual, but is quite recognizable.
+    - `for` loop with some C++ style tricks.
+    - Quite familiar `if`.
     - More details on flow control below...
 
 
@@ -672,7 +672,7 @@ byte = uint(8);
 union IntRep
 {
     i: int;
-    r: byte[0];
+    r: byte[int.sizeof];
 };
 
 {   ir: &IntRep := undef;

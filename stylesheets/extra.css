@@ -1,0 +1,7 @@
+:root [data-md-color-scheme="default"] > * {
+  --md-footer-fg-color: #000000;
+  --md-footer-fg-color--light: #080808;
+  --md-footer-fg-color--lighter: #101010;
+  --md-footer-bg-color: #F8F8F8;
+  --md-footer-bg-color--dark: #F0F0F0;
+}

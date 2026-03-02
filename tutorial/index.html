@@ -1,0 +1,2234 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://dmitry-borodkin.github.io/try-pages/tutorial/">
+      
+      
+        <link rel="prev" href="../strange/">
+      
+      
+        <link rel="next" href="../examples/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../img/black_square.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>The Void Programming Language Tutorial - Try Pages</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-void-programming-language-tutorial" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Try Pages" class="md-header__button md-logo" aria-label="Try Pages" data-md-component="logo">
+      
+  <img src="../img/black_square.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Try Pages
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The Void Programming Language Tutorial
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome to MkDocs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../strange/" class="md-tabs__link">
+          
+  
+  
+  Strange
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Tutorial
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../examples/" class="md-tabs__link">
+          
+  
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Try Pages" class="md-nav__button md-logo" aria-label="Try Pages" data-md-component="logo">
+      
+  <img src="../img/black_square.svg" alt="logo">
+
+    </a>
+    Try Pages
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome to MkDocs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strange
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Strange
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strange/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strange
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorial
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Void Programming Language Tutorial
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Void Programming Language Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#01-the-hello-world-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.1. The "Hello, world" example:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#02-the-extended-hello-world-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.2. The extended "Hello, world" example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-language-syntax-and-semantics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Language syntax (and semantics).
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-the-starter-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. The Starter Language.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. The Starter Language.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-syntax-and-a-bit-of-semantics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Syntax (and a bit of semantics).
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-not-all-functions-are-the-same" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Not all functions are the same...
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-voids-reserved-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Void's Reserved Names
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-the-voids-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. The Void's Types.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4. The Void&#39;s Types.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#241-integer-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.1. Integer types.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#242-floating-point-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.2. Floating point types.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#243-pointer-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.3. Pointer types.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#244-reference-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.4. Reference types.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#245-array-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.5. Array types.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#246-vector-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.6. Vector types.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#247-structure-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.7. Structure types.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#248-function-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.8. Function types.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#249-void-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.9. Void type.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-some-notes-on-datatypes-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5. Some notes on data/types representation ...
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-the-mainline-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. The Mainline Language.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. The Mainline Language.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-how-to-turn-on-mainline-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. How to "turn on" Mainline Language.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-the-most-important-innovations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. The most important innovations:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-definitions-and-declarations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Definitions and declarations.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Definitions and declarations.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1. Definitions.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3.1. Definitions.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3311-defining-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1.1. Defining constants.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3312-defining-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1.2. Defining variables.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3313-defining-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1.3. Defining functions.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3314-defining-structunion-types-with-named-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1.4. Defining struct/union types with named fields.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-declarations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.2. Declarations.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3.2. Declarations.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3321-function-declarations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.2.1. Function declarations.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3322-variable-declarations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.2.2. Variable declarations.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3323-constant-declarations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.2.3. Constant declarations.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Expressions.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4. Expressions.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#to-be-continued" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        To be continued...
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#01-the-hello-world-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.1. The "Hello, world" example:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#02-the-extended-hello-world-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.2. The extended "Hello, world" example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-language-syntax-and-semantics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Language syntax (and semantics).
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-the-starter-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. The Starter Language.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. The Starter Language.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-syntax-and-a-bit-of-semantics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Syntax (and a bit of semantics).
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-not-all-functions-are-the-same" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Not all functions are the same...
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-voids-reserved-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Void's Reserved Names
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-the-voids-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. The Void's Types.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4. The Void&#39;s Types.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#241-integer-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.1. Integer types.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#242-floating-point-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.2. Floating point types.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#243-pointer-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.3. Pointer types.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#244-reference-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.4. Reference types.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#245-array-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.5. Array types.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#246-vector-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.6. Vector types.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#247-structure-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.7. Structure types.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#248-function-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.8. Function types.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#249-void-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.9. Void type.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-some-notes-on-datatypes-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5. Some notes on data/types representation ...
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-the-mainline-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. The Mainline Language.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. The Mainline Language.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-how-to-turn-on-mainline-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. How to "turn on" Mainline Language.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-the-most-important-innovations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. The most important innovations:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-definitions-and-declarations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Definitions and declarations.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Definitions and declarations.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1. Definitions.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3.1. Definitions.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3311-defining-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1.1. Defining constants.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3312-defining-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1.2. Defining variables.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3313-defining-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1.3. Defining functions.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3314-defining-structunion-types-with-named-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1.4. Defining struct/union types with named fields.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-declarations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.2. Declarations.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3.2. Declarations.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3321-function-declarations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.2.1. Function declarations.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3322-variable-declarations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.2.2. Variable declarations.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3323-constant-declarations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.2.3. Constant declarations.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Expressions.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4. Expressions.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#to-be-continued" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        To be continued...
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="the-void-programming-language-tutorial">The Void Programming Language Tutorial</h1>
+<p><strong>Disclaimer:</strong> this tutorial assumes the reader has a rather good knowledge of C/C++,
+understands basic notions of LLVM-C API, and in general "has an idea of how compilers work"...</p>
+<h3 id="01-the-hello-world-example">0.1. The "Hello, world" example:</h3>
+<div class="language-void highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span> <span class="nb">v_import</span><span class="p">(</span><span class="s">&quot;printf.void&quot;</span><span class="p">);</span> <span class="p">}</span>        <span class="c1">// Import declaration of C&#39;s &quot;printf&quot;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">{</span> <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello, world</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span> <span class="p">}</span>       <span class="c1">// Just call it...</span>
+</span></code></pre></div>
+<p>Void's source text is a sequence of so-called "units".
+In example above you can see two of them: the first with <code>v_import</code>, and the second with <code>printf</code>.
+Each unit is (usually) enclosed in (<em>magic</em>) curly braces and can be thought of as a function body in a "C"-like syntax.</p>
+<p>Units are processed by the <code>voidc</code> compiler sequentially, one by one.
+For each unit, the following operations are performed, in order:</p>
+<ol>
+<li>Source text is <em>parsed</em> down to the enclosing <code>}</code>, resulting in the AST.</li>
+<li>The AST is <em>compiled</em> to the object file (in memory) which contains the "unit action" function.</li>
+<li>This "unit action" is <em>executed</em> in compiler's environment by LLVM's JIT.</li>
+</ol>
+<p>I.e. <em>parsing</em> of the next unit will start right after the previous one has been <em>executed</em>...</p>
+<p>In the "Hello, world" example above the first unit calls the compiler's intrinsic function <code>v_import</code>.
+This function receives the name of the source file "printf.void" (from the Voidc's root directory)
+and "imports" it into the "current scope". The "printf.void" file "gives out" only the declaration
+of C's <code>printf</code> function. But that's enough for the second unit which calls this function with sacramental
+greeting message as an argument.</p>
+<p><strong>Essential Note:</strong> it is very important to understand the consequences of this
+<em>parse-compile-execute</em> architecture of the Voidc's "mainloop"...
+It's the key to <del>enormous</del> extensibility of the Void as a language.
+Each unit can change compiler's state into "something completely different"(c)...
+This feature intendend to be seen as the <del>back</del>door to the compiler.
+You just open the curly brace and enter the compiler as your workshop...
+This is why these curly braces are <em>magic</em> <img alt="😉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f609.png" title=":wink:" />.</p>
+<h3 id="02-the-extended-hello-world-example">0.2. The extended "Hello, world" example</h3>
+<p>Let's try to dig a bit deeper and see how it's possible to declare <code>printf</code>
+"from scratch", without any <em>imports</em>...</p>
+<div class="language-void highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span>
+<span class="normal"><a href="#__codelineno-1-26">26</a></span>
+<span class="normal"><a href="#__codelineno-1-27">27</a></span>
+<span class="normal"><a href="#__codelineno-1-28">28</a></span>
+<span class="normal"><a href="#__codelineno-1-29">29</a></span>
+<span class="normal"><a href="#__codelineno-1-30">30</a></span>
+<span class="normal"><a href="#__codelineno-1-31">31</a></span>
+<span class="normal"><a href="#__codelineno-1-32">32</a></span>
+<span class="normal"><a href="#__codelineno-1-33">33</a></span>
+<span class="normal"><a href="#__codelineno-1-34">34</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">// Unit 1: declaration of the v_pointer_type</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>    <span class="n">typ0</span> <span class="p">=</span> <span class="nb">v_alloca</span><span class="p">(</span><span class="nb">v_type_ptr</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>     <span class="c1">// Allocate &quot;array&quot; for two types</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>    <span class="n">typ1</span> <span class="p">=</span> <span class="nb">v_getelementptr</span><span class="p">(</span><span class="n">typ0</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>    <span class="c1">// Get pointer to the second element</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>    <span class="nb">v_store</span><span class="p">(</span><span class="nb">v_type_ptr</span><span class="p">,</span> <span class="n">typ0</span><span class="p">);</span>          <span class="c1">// Argument 1: element type</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>    <span class="nb">v_store</span><span class="p">(</span><span class="kt">unsigned</span><span class="p">,</span>   <span class="n">typ1</span><span class="p">);</span>          <span class="c1">// Argument 2: address space</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a>    <span class="n">ft</span> <span class="p">=</span> <span class="nb">v_function_type</span><span class="p">(</span><span class="nb">v_type_ptr</span><span class="p">,</span>    <span class="c1">// Return type</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a>                         <span class="n">typ0</span><span class="p">,</span>          <span class="c1">// Argument types</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a>                         <span class="mi">2</span><span class="p">,</span>             <span class="c1">// Number of arguments</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a>                         <span class="kc">false</span><span class="p">);</span>        <span class="c1">// VarArgs? (not)</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a>    <span class="nb">v_add_symbol</span><span class="p">(</span><span class="s">&quot;v_pointer_type&quot;</span><span class="p">,</span>      <span class="c1">// Name</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a>                 <span class="n">ft</span><span class="p">,</span>                    <span class="c1">// Type</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a>                 <span class="mi">0</span><span class="p">);</span>                    <span class="c1">// Value (none - just declaration)</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="p">}</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18"></a>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="c1">// Unit 2: declaration of the printf</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="p">{</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21"></a>    <span class="n">typ</span> <span class="p">=</span> <span class="nb">v_alloca</span><span class="p">(</span><span class="nb">v_type_ptr</span><span class="p">);</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22"></a>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23"></a>    <span class="n">char_ptr</span> <span class="p">=</span> <span class="nb">v_pointer_type</span><span class="p">(</span><span class="kt">char</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24"></a>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25"></a>    <span class="nb">v_store</span><span class="p">(</span><span class="n">char_ptr</span><span class="p">,</span> <span class="n">typ</span><span class="p">);</span>             <span class="c1">// Format string</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26"></a>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27"></a>    <span class="n">ft</span> <span class="p">=</span> <span class="nb">v_function_type</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="n">typ</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28"></a>    <span class="nb">v_add_symbol</span><span class="p">(</span><span class="s">&quot;printf&quot;</span><span class="p">,</span> <span class="n">ft</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="p">}</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30"></a>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="c1">// Unit 3: call the printf</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="p">{</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33"></a>    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello, world</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="p">}</span>
+</span></code></pre></div></td></tr></table></div>
+<p>First of all, it must be mentioned that when <code>voidc</code> starts to read the source file,
+it begins with "minimal" internal environment. Only very few names are pre-declared.
+Everything else, that we wish to use, must be declared "by hands" (or by imports)...</p>
+<p>In the case of <code>printf</code> we have almost all necessary tools accessible, except one -
+the function <code>v_pointer_type</code> (to build "pointer to char" type).
+So, the first unit makes exactly this thing: it declares the <code>v_pointer_type</code> function...</p>
+<p>As is often the case in programming, it is best to read it <em>sdrawkcab</em>:</p>
+<ul>
+<li>The last statement of the unit calls the function <code>v_add_symbol</code> to "declare" the <code>v_pointer_type</code> function.
+  The term "symbol" here denotes a symbol in the terminology of (JIT's) linker.</li>
+</ul>
+<div class="language-void highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a>    <span class="nb">v_add_symbol</span><span class="p">(</span><span class="s">&quot;v_pointer_type&quot;</span><span class="p">,</span>      <span class="c1">// Name</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a>                 <span class="n">ft</span><span class="p">,</span>                    <span class="c1">// Type</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16"></a>                 <span class="mi">0</span><span class="p">);</span>                    <span class="c1">// Value (none - just declaration)</span>
+</span></code></pre></div></td></tr></table></div>
+<ul>
+<li>The last but one statement builds the type of the <code>v_pointer_type</code> function.</li>
+</ul>
+<div class="language-void highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a>    <span class="n">ft</span> <span class="p">=</span> <span class="nb">v_function_type</span><span class="p">(</span><span class="nb">v_type_ptr</span><span class="p">,</span>    <span class="c1">// Return type</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a>                         <span class="n">typ0</span><span class="p">,</span>          <span class="c1">// Argument types</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a>                         <span class="mi">2</span><span class="p">,</span>             <span class="c1">// Number of arguments</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a>                         <span class="kc">false</span><span class="p">);</span>        <span class="c1">// VarArgs? (not)</span>
+</span></code></pre></div></td></tr></table></div>
+<ul>
+<li>The previous pair of statements (containing <code>v_store</code>) form the list of argument types for the <code>v_pointer_type</code> function.</li>
+</ul>
+<div class="language-void highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a>    <span class="nb">v_store</span><span class="p">(</span><span class="nb">v_type_ptr</span><span class="p">,</span> <span class="n">typ0</span><span class="p">);</span>          <span class="c1">// Argument 1: element type</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a>    <span class="nb">v_store</span><span class="p">(</span><span class="kt">unsigned</span><span class="p">,</span>   <span class="n">typ1</span><span class="p">);</span>          <span class="c1">// Argument 2: address space</span>
+</span></code></pre></div></td></tr></table></div>
+<ul>
+<li>And "finally", the first couple of statements prepare the memory (in stack) for the list of argument types.</li>
+</ul>
+<div class="language-void highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a>    <span class="n">typ0</span> <span class="p">=</span> <span class="nb">v_alloca</span><span class="p">(</span><span class="nb">v_type_ptr</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>     <span class="c1">// Allocate &quot;array&quot; for two types</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>    <span class="n">typ1</span> <span class="p">=</span> <span class="nb">v_getelementptr</span><span class="p">(</span><span class="n">typ0</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>    <span class="c1">// Get pointer to the second element</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Many important details have been omitted for brevity...</p>
+<p>The second unit, in similiar way as the first one, declares the <code>printf</code> function.
+Note the use of the <code>v_pointer_type</code> function.</p>
+<div class="language-void highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-21">21</a></span>
+<span class="normal"><a href="#__codelineno-6-22">22</a></span>
+<span class="normal"><a href="#__codelineno-6-23">23</a></span>
+<span class="normal"><a href="#__codelineno-6-24">24</a></span>
+<span class="normal"><a href="#__codelineno-6-25">25</a></span>
+<span class="normal"><a href="#__codelineno-6-26">26</a></span>
+<span class="normal"><a href="#__codelineno-6-27">27</a></span>
+<span class="normal"><a href="#__codelineno-6-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21"></a>    <span class="n">typ</span> <span class="p">=</span> <span class="nb">v_alloca</span><span class="p">(</span><span class="nb">v_type_ptr</span><span class="p">);</span>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22"></a>
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23"></a>    <span class="n">char_ptr</span> <span class="p">=</span> <span class="nb">v_pointer_type</span><span class="p">(</span><span class="kt">char</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24"></a>
+</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25"></a>    <span class="nb">v_store</span><span class="p">(</span><span class="n">char_ptr</span><span class="p">,</span> <span class="n">typ</span><span class="p">);</span>             <span class="c1">// Format string</span>
+</span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26"></a>
+</span><span id="__span-6-27"><a id="__codelineno-6-27" name="__codelineno-6-27"></a>    <span class="n">ft</span> <span class="p">=</span> <span class="nb">v_function_type</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="n">typ</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+</span><span id="__span-6-28"><a id="__codelineno-6-28" name="__codelineno-6-28"></a>    <span class="nb">v_add_symbol</span><span class="p">(</span><span class="s">&quot;printf&quot;</span><span class="p">,</span> <span class="n">ft</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></code></pre></div></td></tr></table></div>
+<p>The third unit just calls the <code>printf</code>...</p>
+<div class="language-void highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-33"><a id="__codelineno-7-33" name="__codelineno-7-33"></a>    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello, world</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="1-language-syntax-and-semantics">1. Language syntax (and semantics).</h2>
+<p>In fact, Void as a language <em>has no</em> fixed/constant/static syntax/semantics...
+Instead, it has a minimalist "starter language" and a set of "language development" tools.
+Then the language is <em>developed</em>, and this development is organized into so-called "levels".</p>
+<p>For the moment (Nov 2023) there are four levels:</p>
+<ul>
+<li><a href="https://github.com/voidc-lab/voidc/blob/master/compiler/import/level-00">Level 0.0</a> - "Starter Language" and compiler API.</li>
+<li><a href="https://github.com/voidc-lab/voidc/blob/master/compiler/import/level-01">Level 0.1</a> - Control flow, grammars, expressions and declarations/definitions.</li>
+<li><a href="https://github.com/voidc-lab/voidc/blob/master/compiler/import/level-02">Level 0.2</a> - "C on steroids"...</li>
+<li><a href="https://github.com/voidc-lab/voidc/blob/master/compiler/import/level-03">Level 0.3</a> - "C++ for poors"...</li>
+</ul>
+<p>All these levels together form the so-called "Mainline Language".</p>
+<p>First we'll go over the Starter Language a little. Just to feel "how it started".
+Then we'll take a closer look at the Mainline Language. To find out "how it's going"...</p>
+<h2 id="2-the-starter-language">2. The Starter Language.</h2>
+<h3 id="21-syntax-and-a-bit-of-semantics">2.1. Syntax (and a bit of semantics).</h3>
+<ul>
+<li>The <code>voidc</code> awaits source files properly encoded in UTF-8.</li>
+<li>Parser works at a Unicode Code Point "granularity".</li>
+<li>Whitespaces are: <code>' '</code>, <code>'\t'</code>, <code>'\n'</code> and <code>'\r'</code> (in C's notation).</li>
+<li>Comments are BCPL's <code>//</code> till the end of line.</li>
+<li>Whitespaces and comments mostly ignored (just delimiters, like in C).</li>
+</ul>
+<p>Abstract syntax can be expressed in EBNF-like notation:</p>
+<div class="language-EBNF highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">unit </span><span class="o">=</span> <span class="s2">&quot;{&quot;</span> <span class="p">{</span><span class="k">stmt</span><span class="p">}</span> <span class="s2">&quot;}&quot;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">stmt </span><span class="err">=</span> <span class="p">[[</span><span class="k">ident </span><span class="s2">&quot;=&quot;</span><span class="p">]</span> <span class="k">expr</span><span class="p">]</span> <span class="s2">&quot;;&quot;</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="k">expr </span><span class="err">=</span> <span class="k">prim </span><span class="p">{</span><span class="s2">&quot;(&quot;</span> <span class="p">[</span><span class="k">expr </span><span class="p">{</span><span class="s2">&quot;,&quot;</span> <span class="k">expr</span><span class="p">}]</span> <span class="s2">&quot;)&quot;</span><span class="p">}</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="k">prim </span><span class="err">=</span> <span class="k">ident </span><span class="p">|</span> <span class="k">integer </span><span class="p">|</span> <span class="k">string </span><span class="p">|</span> <span class="k">char</span>
+</span></code></pre></div>
+<ul>
+<li>Identifiers are C's: <code>[a-zA-Z_][a-zA-Z_0-9]*</code>, case-sensitive.</li>
+<li>Integers only decimal, optionaly signed, without leading zeros.</li>
+<li>Strings and chars similiar to C's, with some "restrictions":<ul>
+<li>Strings are NOT "auto-concatenable".</li>
+<li>Escapes limited only to <code>\t</code>, <code>\n</code>, <code>\r</code>, <code>\'</code>, <code>\"</code> and <code>\\</code>.</li>
+<li>Any other valid non-null Unicode Code Points are <em>allowed</em>.</li>
+</ul>
+</li>
+</ul>
+<p>So, as you can see, the Starter Language is rather limited:</p>
+<ul>
+<li>There are no keywords.</li>
+<li>There are no operators.</li>
+<li>There is no arithmetic.</li>
+<li>There is no flow control.</li>
+<li>There is no preprocessor.</li>
+<li>There are no floating-point, hexadecimal, octal or binary literals.</li>
+<li>Etc, etc, etc ...</li>
+</ul>
+<p>How the hell it is possible to program in it?</p>
+<p>Well... To get an idea you can check the <a href="https://github.com/voidc-lab/voidc/blob/master/hello_jit.void">"hello_jit.void"</a> example.</p>
+<p>In Void you <em>must</em> "write program to write program"(c)...</p>
+<p>All the Starter Language really allows is to call functions. Sequentially.</p>
+<div class="language-void highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello again!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello one more time!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Function calls can be nested and "curried" (like in C).</p>
+<div class="language-void highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">foo</span><span class="p">(</span><span class="n">bar</span><span class="p">(</span><span class="s">&quot;Hi&quot;</span><span class="p">,</span> <span class="mi">42</span><span class="p">),</span> <span class="sc">&#39;Ы&#39;</span><span class="p">)(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)(-</span><span class="mi">7</span><span class="p">);</span>
+</span></code></pre></div>
+<p>What a function returns can be "named" by an identifier.</p>
+<div class="language-void highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">n</span> <span class="p">=</span> <span class="n">strlen</span><span class="p">(</span><span class="s">&quot;Some string&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+<p>These identifiers can be used in subsequent statements.</p>
+<div class="language-void highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">C</span> <span class="p">=</span> <span class="sc">&#39;Ъ&#39;</span><span class="p">;</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Cyrillic Capital Letter Hard Sign: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">C</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Identifiers also can be "shadowed" by subsequent "renamings" (like in Rust).</p>
+<div class="language-void highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">u</span> <span class="p">=</span> <span class="s">&quot;1&quot;</span><span class="p">;</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">u</span> <span class="p">=</span> <span class="n">atof</span><span class="p">(</span><span class="n">u</span><span class="p">);</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="n">v</span> <span class="p">=</span> <span class="n">u</span><span class="p">;</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="n">v</span> <span class="p">=</span> <span class="n">fma</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">);</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="n">v</span> <span class="p">=</span> <span class="n">fma</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">);</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="n">v</span> <span class="p">=</span> <span class="n">fma</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">);</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="n">v</span> <span class="p">=</span> <span class="n">fma</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">);</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;v: %g</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">v</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Please note, in contrast to C, in the Starter Language:</p>
+<ul>
+<li>The identifier to the left of the <code>=</code> symbol does NOT denote a <em>variable</em>.</li>
+<li>The <code>=</code> symbol does NOT denote an assignment.</li>
+</ul>
+<p>In fact, the semantics of <code>=</code> in Void is almost the same as in LLVM IR (with respect to "shadowing").</p>
+<p>Informally, it's possible to think of <code>=</code> as a kind of <em>definition</em> operator.
+It just "sticks" a label with the identifier on the left to the value received on the right...</p>
+<p>Also this is very similar to <code>&lt;-</code> from the monadic "do" notation (in Haskell).</p>
+<h3 id="22-not-all-functions-are-the-same">2.2. Not all functions are the same...</h3>
+<p>Let's look at <a href="#the-extended-hello-world-example">The extended "Hello, world" example</a>.
+In it's code there are several "function calls".
+Some of them actually call real functions (in the "C" language sense).
+But others do "something different"...</p>
+<p>Identifiers <code>v_alloca</code>, <code>v_getelementptr</code> and <code>v_store</code> denote so called <strong>"compile-time intrinsic functions"</strong>.
+Such functions actually called during <em>compilation</em> phase.
+They take arguments in the form of AST and their purpose is (usually) to generate code...</p>
+<p>As for the mentioned <em>"ct-intrinsics"</em>, their semantics correspond to the LLVM IR instructions of similar name.</p>
+<p>There are number of "predefined" compile-time intrinsics, and it's entirely possible to create your own.
+The main advantage of such functions is that they can be <em>polymorphic</em> in the broadest sense.
+They can interpret their arguments "by their own rules".
+They can generate code "in their own way" and/or change the state of the compiler "at their discretion"...</p>
+<p><em>Ct-intrinsics</em> are the most widely used "language development" tools mentioned above.</p>
+<h3 id="23-voids-reserved-names">2.3. Void's Reserved Names</h3>
+<p>Identifiers starting with <code>v_</code> and <code>voidc_</code> are reserved for the needs
+of the <code>voidc</code> compiler itself and the (future) standard library...</p>
+<p>In addition, careless use of external identifiers starting with <code>_</code>, <code>LLVM</code>, etc.
+can lead to collisions with the C/C++ and LLVM libraries.</p>
+<h3 id="24-the-voids-types">2.4. The Void's Types.</h3>
+<p>Starter Language's typing can be described as <em>static</em> and <em>implicit</em>.
+This means that the identifier to the left of the <code>=</code> takes the type
+<em>implicitly</em> determined by the expression on the right.
+This type does not change during identifier's "lifetime" (with respect to "shadowing").</p>
+<p>The Void has it's own type system, which is "mapped" to LLVM's one and can be seen as an <em>extension</em> of it...</p>
+<p>The Starter Language <em>has no</em> specific syntax for types.
+Therefore, we'll describe Void's type system "through the lens" of the compiler's types API.
+This API is designed to be similar (in spirit) to the LLVM-C API associated with LLVM's types.
+The implementation of Void's types is also very similar to LLVM's.</p>
+<p>As you can probably guessed, the name of the type of the Void's types representation is <code>v_type_ptr</code>.
+Like <code>LLVMTypeRef</code>, <code>v_type_ptr</code> looks like a pointer to some opaque structure.</p>
+<h4 id="241-integer-types">2.4.1. Integer types.</h4>
+<p>Void's integer types are all LLVM's ones with additional "attribute" of <em>signedness</em>.</p>
+<p>Yes! You can use integers of any bitwidth accepted by LLVM (i.e. 1 - 2<sup>23</sup>).
+And they can also be signed or unsigned.</p>
+<p>API in "C" syntax:</p>
+<div class="language-C highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">v_type_ptr</span><span class="w"> </span><span class="nf">v_int_type</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">width</span><span class="p">);</span><span class="w">          </span><span class="c1">// Signed</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">v_type_ptr</span><span class="w"> </span><span class="nf">v_uint_type</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">width</span><span class="p">);</span><span class="w">         </span><span class="c1">// Unsigned</span>
+</span></code></pre></div>
+<p>There are number of predefined integral types which correspond to tagret's "C" integral types.
+Some of them: <code>char</code>, <code>short</code>, <code>int</code>, <code>unsigned</code>, <code>long</code>, <code>intptr_t</code> etc...</p>
+<p>Predefined type <code>bool</code> is the <code>v_uint_type(1)</code>. Named constants <code>false</code> and <code>true</code> have obvious type and values...</p>
+<h4 id="242-floating-point-types">2.4.2. Floating point types.</h4>
+<div class="language-C highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">v_type_ptr</span><span class="w"> </span><span class="nf">v_f16_type</span><span class="p">();</span><span class="w">            </span><span class="c1">// LLVM&#39;s half</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">v_type_ptr</span><span class="w"> </span><span class="nf">v_f32_type</span><span class="p">();</span><span class="w">            </span><span class="c1">// LLVM&#39;s float     - C&#39;s</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="n">v_type_ptr</span><span class="w"> </span><span class="nf">v_f64_type</span><span class="p">();</span><span class="w">            </span><span class="c1">// LLVM&#39;s double    - C&#39;s</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="n">v_type_ptr</span><span class="w"> </span><span class="nf">v_f128_type</span><span class="p">();</span><span class="w">           </span><span class="c1">// LLVM&#39;s fp128</span>
+</span></code></pre></div>
+<h4 id="243-pointer-types">2.4.3. Pointer types.</h4>
+<div class="language-C highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">v_type_ptr</span><span class="w"> </span><span class="nf">v_pointer_type</span><span class="p">(</span><span class="n">v_type_ptr</span><span class="w"> </span><span class="n">elem</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">adsp</span><span class="p">);</span>
+</span></code></pre></div>
+<p>These pointer types are similar to C's with respect to additional parameter of LLVM's "address space"...</p>
+<h4 id="244-reference-types">2.4.4. Reference types.</h4>
+<div class="language-C highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">v_type_ptr</span><span class="w"> </span><span class="nf">v_reference_type</span><span class="p">(</span><span class="n">v_type_ptr</span><span class="w"> </span><span class="n">elem</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">adsp</span><span class="p">);</span>
+</span></code></pre></div>
+<p>These references are semantically alike to C++'s <code>&amp;</code> ones (with respect to LLVM's "address space").</p>
+<p>Reference can be seen as a pointer in a "superhero costume"...
+The "superpower" of reference is ability to <em>unreference</em> pointed value "on demand".</p>
+<h4 id="245-array-types">2.4.5. Array types.</h4>
+<div class="language-C highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">v_type_ptr</span><span class="w"> </span><span class="nf">v_array_type</span><span class="p">(</span><span class="n">v_type_ptr</span><span class="w"> </span><span class="n">elem</span><span class="p">,</span><span class="w"> </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">length</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Ordinary LLVM's (and C's) arrays...</p>
+<h4 id="246-vector-types">2.4.6. Vector types.</h4>
+<div class="language-C highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">v_type_ptr</span><span class="w"> </span><span class="nf">v_vector_type</span><span class="p">(</span><span class="n">v_type_ptr</span><span class="w"> </span><span class="n">elem</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">size</span><span class="p">);</span><span class="w">           </span><span class="c1">// ...</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="n">v_type_ptr</span><span class="w"> </span><span class="nf">v_svector_type</span><span class="p">(</span><span class="n">v_type_ptr</span><span class="w"> </span><span class="n">elem</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">size</span><span class="p">);</span><span class="w">          </span><span class="c1">// Scalable</span>
+</span></code></pre></div>
+<p>LLVM's vectors...</p>
+<h4 id="247-structure-types">2.4.7. Structure types.</h4>
+<div class="language-C highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">v_type_ptr</span><span class="w"> </span><span class="nf">v_struct_type_named</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">name</span><span class="p">);</span><span class="w">                           </span><span class="c1">// Named (opaque)</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="n">v_type_ptr</span><span class="w"> </span><span class="nf">v_struct_type</span><span class="p">(</span><span class="n">v_type_ptr</span><span class="w"> </span><span class="o">*</span><span class="n">elts</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">count</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">packed</span><span class="p">);</span><span class="w">    </span><span class="c1">// Unnamed</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">v_type_struct_set_body</span><span class="p">(</span><span class="n">v_type_ptr</span><span class="w"> </span><span class="n">typ</span><span class="p">,</span><span class="w"> </span><span class="n">v_type_ptr</span><span class="w"> </span><span class="o">*</span><span class="n">elts</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">count</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">packed</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Similar to LLVM's struct types. Fields are unnamed, indexed by numbers...</p>
+<h4 id="248-function-types">2.4.8. Function types.</h4>
+<div class="language-C highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">v_type_ptr</span><span class="w"> </span><span class="nf">v_function_type</span><span class="p">(</span><span class="n">v_type_ptr</span><span class="w"> </span><span class="n">ret</span><span class="p">,</span><span class="w"> </span><span class="n">v_type_ptr</span><span class="w"> </span><span class="o">*</span><span class="n">par</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">count</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">vararg</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Similar to LLVM's (and C's) function types...</p>
+<h4 id="249-void-type">2.4.9. Void type.</h4>
+<div class="language-C highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">v_type_ptr</span><span class="w"> </span><span class="nf">v_void_type</span><span class="p">();</span><span class="w">               </span><span class="c1">// As is...</span>
+</span></code></pre></div>
+<p>This type also predefined as <code>void</code>...</p>
+<h3 id="25-some-notes-on-datatypes-representation">2.5. Some notes on data/types representation ...</h3>
+<ul>
+<li>
+<p><code>'ю'</code> - character literals are of type <code>char32_t</code> which is the <code>v_uint_type(32)</code>.</p>
+</li>
+<li>
+<p>String literal represented as a (constant) <em>value</em> of type 'array of <code>char</code>', encoded in UTF-8, null-terminated.</p>
+</li>
+</ul>
+<div class="language-void highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">str</span> <span class="p">=</span> <span class="s">&quot;Hello world!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>         <span class="c1">// ... v_array_type(char, 14)</span>
+</span></code></pre></div>
+<ul>
+<li>Such strings can be <em>promoted</em> to pointers "on demand" (like in C):</li>
+</ul>
+<div class="language-void highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">str</span> <span class="p">=</span> <span class="s">&quot;world&quot;</span><span class="p">;</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello %s!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">str</span><span class="p">);</span>
+</span></code></pre></div>
+<ul>
+<li>There's some kind of (C-like) <em>promotion</em> of arithmetic types...</li>
+</ul>
+<div class="language-void highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;sqrt(2) = %g</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>          <span class="c1">// C&#39;s &quot;double sqrt(double)&quot;</span>
+</span></code></pre></div>
+<h2 id="3-the-mainline-language">3. The Mainline Language.</h2>
+<p>The "Mainline Language" is obtained by applying a sequence of extensions,
+grouped in the form of so-called "levels". Each subsequent extension builds on the previous ones.</p>
+<p>You can imagine this development as a passage of a computer game.
+The main character is, in fact, our “Language”.
+At the beginning, he has the “rank” of “Starter” and can do almost nothing.
+But during the game, our hero goes through a whole series of “adventures”
+and acquires new skills and abilities.
+And at some point it reaches the “rank” of “Mainline”...</p>
+<p>In addition to “levels” there will also be “versions” and they should not be confused.
+Versions refer to the "game" as a whole.
+The “game” itself will “evolve” from version to version.
+The levels will change (slightly) and new levels will be added...</p>
+<p>There are no versions in our project yet, but at some point they will inevitably appear...</p>
+<h3 id="31-how-to-turn-on-mainline-language">3.1. How to "turn on" Mainline Language.</h3>
+<p>The simplest (but not the only) way is to place these two units at the beginning of the source file:</p>
+<div class="language-void highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="p">{</span> <span class="nb">v_import</span><span class="p">(</span><span class="s">&quot;mainline.void&quot;</span><span class="p">);</span> <span class="p">}</span>      <span class="c1">// Import the Mainline Language</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="p">{</span> <span class="nb">v_enable_mainline</span><span class="p">();</span> <span class="p">}</span>            <span class="c1">// &quot;Enable&quot; it</span>
+</span></code></pre></div>
+<p>The first unit imports all the necessary tools for the Mainline Language to work,
+but the current language <strong>does not change</strong>.
+The import process will compile quite a lot of code for the first time,
+which can take quite a long time.
+But subsequent imports will be significantly faster thanks to "pre-<em>compilation</em>" (Python style)...</p>
+<p>The second unit calls the <code>v_enable_mainline</code> function, imported from <code>mainline.void</code>.
+This function "enables" all the tools of the Mainline Language:</p>
+<ul>
+<li>Changes the grammar (and parser).</li>
+<li>Adds new “node types” to the AST hierarchy.</li>
+<li>"Teaches" the compiler to work with these new types of AST nodes.</li>
+</ul>
+<p>As a result, immediately after the second unit (right after its <code>}</code>)
+the “new compiler” of Mainline Language starts working, which allows you to use all the new features...</p>
+<h3 id="32-the-most-important-innovations">3.2. The <em>most</em> important innovations:</h3>
+<ul>
+<li>A new kind of units containing a set of definitions/declarations.</li>
+<li>A new kind of “statements” - definitions and declarations.</li>
+</ul>
+<p>Example (assuming Mainline Language is already enabled):</p>
+<div class="language-void highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="c1">// ...</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="c1">// Unit of definitions/declarations:</span>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="n">double</span> <span class="p">=</span> <span class="kt">float</span><span class="p">(</span><span class="mi">64</span><span class="p">);</span>             <span class="c1">// Kinda, &quot;typedef&quot;</span>
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="n">ceil</span><span class="p">:</span> <span class="p">(</span><span class="n">double</span><span class="p">)</span> <span class="p">~&gt;</span> <span class="n">double</span><span class="p">;</span>       <span class="c1">// Declarations...</span>
+</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="n">sqrt</span><span class="p">:</span> <span class="p">(</span><span class="n">double</span><span class="p">)</span> <span class="p">~&gt;</span> <span class="n">double</span><span class="p">;</span>
+</span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>
+</span><span id="__span-27-9"><a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a><span class="n">printf</span><span class="p">:</span> <span class="p">(*</span><span class="k">const</span> <span class="kt">char</span><span class="p">,</span> <span class="p">...)</span> <span class="p">~&gt;</span> <span class="kt">int</span><span class="p">;</span>          <span class="c1">// Good old printf...</span>
+</span><span id="__span-27-10"><a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a>
+</span><span id="__span-27-11"><a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a><span class="n">S</span> <span class="p">=</span> <span class="mi">1000</span><span class="p">;</span>                       <span class="c1">// Size of sieve - constant, int type</span>
+</span><span id="__span-27-12"><a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a>
+</span><span id="__span-27-13"><a id="__codelineno-27-13" name="__codelineno-27-13" href="#__codelineno-27-13"></a><span class="n">sieve</span><span class="p">:</span> <span class="p">&amp;</span><span class="kt">bool</span><span class="p">[</span><span class="n">S</span><span class="p">]</span> <span class="p">:=</span> <span class="mi">0</span><span class="p">;</span>           <span class="c1">// Mutable array of bool, zero initialized</span>
+</span><span id="__span-27-14"><a id="__codelineno-27-14" name="__codelineno-27-14" href="#__codelineno-27-14"></a>
+</span><span id="__span-27-15"><a id="__codelineno-27-15" name="__codelineno-27-15" href="#__codelineno-27-15"></a><span class="c1">// &quot;Usual&quot; unit:</span>
+</span><span id="__span-27-16"><a id="__codelineno-27-16" name="__codelineno-27-16" href="#__codelineno-27-16"></a><span class="p">{</span>
+</span><span id="__span-27-17"><a id="__codelineno-27-17" name="__codelineno-27-17" href="#__codelineno-27-17"></a>    <span class="n">sieve</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">:=</span> <span class="kc">true</span><span class="p">;</span>           <span class="c1">// Assignment ...</span>
+</span><span id="__span-27-18"><a id="__codelineno-27-18" name="__codelineno-27-18" href="#__codelineno-27-18"></a>
+</span><span id="__span-27-19"><a id="__codelineno-27-19" name="__codelineno-27-19" href="#__codelineno-27-19"></a>    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">:</span> <span class="p">&amp;</span><span class="kt">int</span> <span class="p">:=</span> <span class="mi">3</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">S</span><span class="p">;</span> <span class="n">i</span> <span class="p">+=</span> <span class="mi">2</span><span class="p">)</span>   <span class="n">sieve</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">:=</span> <span class="kc">true</span><span class="p">;</span>
+</span><span id="__span-27-20"><a id="__codelineno-27-20" name="__codelineno-27-20" href="#__codelineno-27-20"></a>
+</span><span id="__span-27-21"><a id="__codelineno-27-21" name="__codelineno-27-21" href="#__codelineno-27-21"></a>    <span class="n">R</span> <span class="p">=</span> <span class="p">(</span><span class="n">ceil</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">S</span><span class="p">))</span> <span class="p">:</span> <span class="kt">int</span><span class="p">);</span>      <span class="c1">// ... cast ...</span>
+</span><span id="__span-27-22"><a id="__codelineno-27-22" name="__codelineno-27-22" href="#__codelineno-27-22"></a>
+</span><span id="__span-27-23"><a id="__codelineno-27-23" name="__codelineno-27-23" href="#__codelineno-27-23"></a>    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">:</span> <span class="p">&amp;</span><span class="kt">int</span> <span class="p">:=</span> <span class="mi">3</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">R</span><span class="p">;</span> <span class="n">i</span> <span class="p">+=</span> <span class="mi">2</span><span class="p">)</span>
+</span><span id="__span-27-24"><a id="__codelineno-27-24" name="__codelineno-27-24" href="#__codelineno-27-24"></a>    <span class="p">{</span>
+</span><span id="__span-27-25"><a id="__codelineno-27-25" name="__codelineno-27-25" href="#__codelineno-27-25"></a>        <span class="k">if</span> <span class="p">(!</span><span class="n">sieve</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>  <span class="k">continue</span><span class="p">;</span>
+</span><span id="__span-27-26"><a id="__codelineno-27-26" name="__codelineno-27-26" href="#__codelineno-27-26"></a>
+</span><span id="__span-27-27"><a id="__codelineno-27-27" name="__codelineno-27-27" href="#__codelineno-27-27"></a>        <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">:</span> <span class="p">&amp;</span><span class="kt">int</span> <span class="p">:=</span> <span class="n">i</span><span class="p">*</span><span class="n">i</span><span class="p">,</span> <span class="n">i2</span> <span class="p">=</span> <span class="mi">2</span><span class="p">*</span><span class="n">i</span><span class="p">;</span> <span class="n">k</span> <span class="p">&lt;</span> <span class="n">S</span><span class="p">;</span> <span class="n">k</span> <span class="p">+=</span> <span class="n">i2</span><span class="p">)</span>
+</span><span id="__span-27-28"><a id="__codelineno-27-28" name="__codelineno-27-28" href="#__codelineno-27-28"></a>        <span class="p">{</span>
+</span><span id="__span-27-29"><a id="__codelineno-27-29" name="__codelineno-27-29" href="#__codelineno-27-29"></a>            <span class="n">sieve</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="p">:=</span> <span class="kc">false</span><span class="p">;</span>
+</span><span id="__span-27-30"><a id="__codelineno-27-30" name="__codelineno-27-30" href="#__codelineno-27-30"></a>        <span class="p">}</span>
+</span><span id="__span-27-31"><a id="__codelineno-27-31" name="__codelineno-27-31" href="#__codelineno-27-31"></a>    <span class="p">}</span>
+</span><span id="__span-27-32"><a id="__codelineno-27-32" name="__codelineno-27-32" href="#__codelineno-27-32"></a>
+</span><span id="__span-27-33"><a id="__codelineno-27-33" name="__codelineno-27-33" href="#__codelineno-27-33"></a>    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">:</span> <span class="p">&amp;</span><span class="kt">int</span> <span class="p">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">S</span><span class="p">;</span> <span class="p">++</span><span class="n">i</span><span class="p">)</span>
+</span><span id="__span-27-34"><a id="__codelineno-27-34" name="__codelineno-27-34" href="#__codelineno-27-34"></a>    <span class="p">{</span>
+</span><span id="__span-27-35"><a id="__codelineno-27-35" name="__codelineno-27-35" href="#__codelineno-27-35"></a>        <span class="k">if</span> <span class="p">(</span><span class="n">sieve</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+</span><span id="__span-27-36"><a id="__codelineno-27-36" name="__codelineno-27-36" href="#__codelineno-27-36"></a>    <span class="p">}</span>
+</span><span id="__span-27-37"><a id="__codelineno-27-37" name="__codelineno-27-37" href="#__codelineno-27-37"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>In this example you can see two units:</p>
+<ul>
+<li>The first, in a new format, contains definitions and declarations.</li>
+<li>The second, in familiar braces, contains many new constructions...</li>
+</ul>
+<p>New kind units usually occupy all the space between two "traditional" units
+and must contain at least one definition or declaration.
+Let's see what we have there:</p>
+<ul>
+<li>Definition of the type <code>double</code>, in a familiar style. And yes, we now have type expression syntax!</li>
+<li>Declarations of some C functions. In a "mathematical" style.
+The <code>~&gt;</code> operator "hints" that these are <em>imperative</em> functions.
+Parentheses around the parameter list are mandatory.</li>
+<li>Definition of an integer constant. The default type is <code>int</code>.
+If you need something else, please indicate explicitly, for example: <code>Sz: size_t = 65536;</code></li>
+<li>Definition of a <strong>mutable</strong> variable. The type must be <em>reference</em>. The <code>:=</code> operator means initialization.
+If you omit the initialization and leave only the type, you get a <em>declaration</em>...</li>
+</ul>
+<p>All the above definitions/declarations are <em>global</em> and are visible in all subsequent units.
+The order is important! Every identifier must be defined or declared before it can be used.</p>
+<p>Now let's see what's interesting in the second unit:</p>
+<ul>
+<li>
+<p>Expressions in C style with some features:</p>
+<ul>
+<li>The assignment operator symbol looks like <code>:=</code> (same as initialization).</li>
+<li>The cast operator looks like <code>( &lt;value&gt; : &lt;type&gt; )</code>. Parentheses are mandatory.</li>
+<li>For other details of the expressions, see below...</li>
+</ul>
+</li>
+<li>
+<p>C-style flow control constructs:</p>
+<ul>
+<li><code>for</code> loop with some C++ style tricks.</li>
+<li>Quite familiar <code>if</code>.</li>
+<li>More details on flow control below...</li>
+</ul>
+</li>
+</ul>
+<h3 id="33-definitions-and-declarations">3.3. Definitions and declarations.</h3>
+<p>These "statements" are of two kinds:</p>
+<h4 id="331-definitions">3.3.1. <em>Definitions</em>.</h4>
+<p>Usually contains <code>=</code> or <code>:=</code> operators.</p>
+<h5 id="3311-defining-constants">3.3.1.1. Defining <em>constants</em>.</h5>
+<p>Syntax - <code>&lt;name&gt; : &lt;type&gt; = &lt;value&gt; ;</code> or the familiar <code>&lt;name&gt; = &lt;expression&gt; ;</code>:</p>
+<ul>
+<li><code>&lt;name&gt;</code> can be an identifier or a so-called <em>special identifier</em>.</li>
+<li><code>&lt;type&gt;</code> and <code>&lt;value&gt;</code> are usually <em>expressions</em>.</li>
+<li><code>&lt;expression&gt;</code> can denote a <em>type</em>.</li>
+</ul>
+<p>Example:</p>
+<div class="language-void highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">U</span> <span class="p">=</span> <span class="sc">&#39;U&#39;</span><span class="p">;</span>                                    <span class="c1">// U : char32_t</span>
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="n">s</span> <span class="p">=</span> <span class="s">&quot;Hello World&quot;</span><span class="p">;</span>                          <span class="c1">// s : char[12]</span>
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>
+</span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="n">f</span> <span class="p">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="p">==</span> <span class="n">U</span><span class="p">+</span><span class="mi">2</span><span class="p">;</span>                            <span class="c1">// Same as  f = true;</span>
+</span><span id="__span-28-6"><a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>
+</span><span id="__span-28-7"><a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a><span class="n">ss</span><span class="p">:</span> <span class="p">(*</span><span class="k">const</span> <span class="kt">char</span><span class="p">)[]</span> <span class="p">=</span> <span class="p">{</span> <span class="s">&quot;foo&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">+</span><span class="mi">6</span> <span class="p">};</span>       <span class="c1">// ss : (*const char)[2]</span>
+</span><span id="__span-28-8"><a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>
+</span><span id="__span-28-9"><a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a><span class="n">tt</span> <span class="p">=</span> <span class="n">ss</span><span class="p">[</span><span class="n">f</span><span class="p">];</span>                                 <span class="c1">// tt : *const char</span>
+</span><span id="__span-28-10"><a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a>
+</span><span id="__span-28-11"><a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a><span class="p">{</span> <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello %s!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">tt</span><span class="p">);</span> <span class="p">}</span>              <span class="c1">// ...</span>
+</span></code></pre></div>
+<h5 id="3312-defining-variables">3.3.1.2. Defining <em>variables</em>.</h5>
+<p>Syntax - <code>&lt;name&gt; : &lt;type&gt; := &lt;value&gt; ;</code>:</p>
+<ul>
+<li><code>&lt;name&gt;</code> is the usual identifier of a variable located in memory.</li>
+<li><code>&lt;type&gt;</code> is an expression that must denote a <em>reference</em> type.</li>
+<li>
+<p><code>&lt;value&gt;</code> is an expression that specifies the initial value. Special (universal) cases:</p>
+<ul>
+<li><code>0</code> - zero initialization.</li>
+<li><code>undef</code> - the initial value is undefined.</li>
+</ul>
+</li>
+</ul>
+<p>Example:</p>
+<div class="language-void highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">i</span><span class="p">:</span> <span class="p">&amp;</span><span class="kt">int</span> <span class="p">:=</span> <span class="mi">1</span><span class="p">;</span>                               <span class="c1">// Just int</span>
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="n">j</span><span class="p">:</span> <span class="p">&amp;</span><span class="kt">int</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="p">:=</span> <span class="p">{</span> <span class="n">i</span><span class="p">+</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="p">+</span><span class="mi">2</span><span class="p">,</span> <span class="n">i</span><span class="p">+</span><span class="mi">3</span><span class="p">,</span> <span class="n">i</span><span class="p">+</span><span class="mi">4</span> <span class="p">};</span>  <span class="c1">// Array of ints</span>
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>
+</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a><span class="n">k</span><span class="p">:</span> <span class="p">&amp;(*</span><span class="kt">int</span><span class="p">)[</span><span class="mi">3</span><span class="p">]</span> <span class="p">:=</span> <span class="p">{</span> <span class="n">j</span><span class="p">+</span><span class="mi">0</span><span class="p">,</span> <span class="n">j</span><span class="p">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">+</span><span class="mi">2</span> <span class="p">};</span>         <span class="c1">// Array of pointers</span>
+</span><span id="__span-29-6"><a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>
+</span><span id="__span-29-7"><a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a><span class="n">f</span> <span class="p">=</span> <span class="n">j</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">==</span> <span class="mi">3</span><span class="p">;</span>                              <span class="c1">// Almost the same as  f = true;</span>
+</span><span id="__span-29-8"><a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>
+</span><span id="__span-29-9"><a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a><span class="n">g</span> <span class="p">=</span> <span class="n">k</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">==</span> <span class="p">&amp;</span><span class="n">j</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>                          <span class="c1">// Almost the same as  g = true;</span>
+</span></code></pre></div>
+<h5 id="3313-defining-functions">3.3.1.3. Defining <em>functions</em>.</h5>
+<p>Syntax - <code>&lt;name&gt; : &lt;type&gt; { &lt;body&gt; }</code>:</p>
+<ul>
+<li><code>&lt;name&gt;</code> can be an identifier or a so-called <em>special identifier</em>.</li>
+<li><code>&lt;type&gt;</code> is an "expression" that must denote a <em>function</em> <em>proto</em>-type.</li>
+<li><code>&lt;body&gt;</code> - list of statements...</li>
+</ul>
+<p>Example:</p>
+<div class="language-void highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">multiply</span><span class="p">:</span> <span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="kt">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="kt">int</span><span class="p">)</span> <span class="p">~&gt;</span> <span class="kt">int</span>           <span class="c1">// By value</span>
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="p">{</span>
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>    <span class="k">return</span>  <span class="n">a</span> <span class="p">*</span> <span class="n">b</span><span class="p">;</span>                          <span class="c1">// ...</span>
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="p">}</span>
+</span></code></pre></div>
+<h5 id="3314-defining-structunion-types-with-named-fields">3.3.1.4. Defining struct/union <em>types</em> with named fields.</h5>
+<p>Syntax (in EBNF-like notation):</p>
+<div class="language-EBNF highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="err">...</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;struct&quot;</span><span class="p">|</span><span class="s2">&quot;union&quot;</span><span class="p">)</span> <span class="p">[</span><span class="k">identifier</span><span class="p">]</span> <span class="p">[</span><span class="s1">&#39;{&#39;</span> <span class="p">{[</span><span class="k">identifier </span><span class="s1">&#39;:&#39;</span><span class="p">]</span> <span class="k">expression </span><span class="s1">&#39;;&#39;</span><span class="p">}</span> <span class="s1">&#39;}&#39;</span><span class="p">]</span> <span class="s1">&#39;;&#39;</span>
+</span></code></pre></div>
+<p>Structures and unions are in many ways similar to C ones. See details below.</p>
+<p>Example:</p>
+<div class="language-void highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="k">struct</span> <span class="n">FILE</span><span class="p">;</span>            <span class="c1">// Opaque structure</span>
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="k">struct</span> <span class="n">Coords</span>
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="p">{</span>
+</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>    <span class="n">x</span><span class="p">:</span> <span class="n">double</span><span class="p">;</span>
+</span><span id="__span-32-6"><a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>    <span class="n">y</span><span class="p">:</span> <span class="n">double</span><span class="p">;</span>
+</span><span id="__span-32-7"><a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a><span class="p">};</span>
+</span><span id="__span-32-8"><a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>
+</span><span id="__span-32-9"><a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a><span class="n">byte</span> <span class="p">=</span> <span class="kt">uint</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+</span><span id="__span-32-10"><a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a>
+</span><span id="__span-32-11"><a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a><span class="k">union</span> <span class="n">IntRep</span>
+</span><span id="__span-32-12"><a id="__codelineno-32-12" name="__codelineno-32-12" href="#__codelineno-32-12"></a><span class="p">{</span>
+</span><span id="__span-32-13"><a id="__codelineno-32-13" name="__codelineno-32-13" href="#__codelineno-32-13"></a>    <span class="n">i</span><span class="p">:</span> <span class="kt">int</span><span class="p">;</span>
+</span><span id="__span-32-14"><a id="__codelineno-32-14" name="__codelineno-32-14" href="#__codelineno-32-14"></a>    <span class="n">r</span><span class="p">:</span> <span class="n">byte</span><span class="p">[</span><span class="kt">int</span><span class="p">.</span><span class="n">sizeof</span><span class="p">];</span>
+</span><span id="__span-32-15"><a id="__codelineno-32-15" name="__codelineno-32-15" href="#__codelineno-32-15"></a><span class="p">};</span>
+</span><span id="__span-32-16"><a id="__codelineno-32-16" name="__codelineno-32-16" href="#__codelineno-32-16"></a>
+</span><span id="__span-32-17"><a id="__codelineno-32-17" name="__codelineno-32-17" href="#__codelineno-32-17"></a><span class="p">{</span>   <span class="n">ir</span><span class="p">:</span> <span class="p">&amp;</span><span class="n">IntRep</span> <span class="p">:=</span> <span class="kp">undef</span><span class="p">;</span>
+</span><span id="__span-32-18"><a id="__codelineno-32-18" name="__codelineno-32-18" href="#__codelineno-32-18"></a>
+</span><span id="__span-32-19"><a id="__codelineno-32-19" name="__codelineno-32-19" href="#__codelineno-32-19"></a>    <span class="n">ir</span><span class="p">.</span><span class="n">i</span> <span class="p">:=</span> <span class="mh">0xDEADBEEF</span><span class="p">;</span>
+</span><span id="__span-32-20"><a id="__codelineno-32-20" name="__codelineno-32-20" href="#__codelineno-32-20"></a>
+</span><span id="__span-32-21"><a id="__codelineno-32-21" name="__codelineno-32-21" href="#__codelineno-32-21"></a>    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">:</span> <span class="p">&amp;</span><span class="kt">int</span> <span class="p">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="kt">int</span><span class="p">.</span><span class="n">sizeof</span><span class="p">;</span> <span class="p">++</span><span class="n">i</span><span class="p">)</span>
+</span><span id="__span-32-22"><a id="__codelineno-32-22" name="__codelineno-32-22" href="#__codelineno-32-22"></a>    <span class="p">{</span>
+</span><span id="__span-32-23"><a id="__codelineno-32-23" name="__codelineno-32-23" href="#__codelineno-32-23"></a>        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%02X &quot;</span><span class="p">,</span> <span class="n">ir</span><span class="p">.</span><span class="n">r</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span><span id="__span-32-24"><a id="__codelineno-32-24" name="__codelineno-32-24" href="#__codelineno-32-24"></a>    <span class="p">}</span>
+</span><span id="__span-32-25"><a id="__codelineno-32-25" name="__codelineno-32-25" href="#__codelineno-32-25"></a>
+</span><span id="__span-32-26"><a id="__codelineno-32-26" name="__codelineno-32-26" href="#__codelineno-32-26"></a>    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-32-27"><a id="__codelineno-32-27" name="__codelineno-32-27" href="#__codelineno-32-27"></a><span class="p">}</span>
+</span></code></pre></div>
+<h4 id="332-declarations">3.3.2. <em>Declarations</em>.</h4>
+<p>General syntax - <code>&lt;name&gt; : &lt;type&gt; ;</code>:</p>
+<ul>
+<li><code>&lt;name&gt;</code> can be an identifier or a so-called <em>special identifier</em>.</li>
+<li><code>&lt;type&gt;</code> is a type expression.</li>
+</ul>
+<p>Depending on what <code>&lt;type&gt;</code> is, different cases are possible...</p>
+<h5 id="3321-function-declarations">3.3.2.1. <em>Function</em> declarations.</h5>
+<p><code>&lt;type&gt;</code> must be a function type.</p>
+<p>Example:</p>
+<div class="language-void highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="n">qsort</span><span class="p">:</span> <span class="p">(</span><span class="n">ptr</span><span class="p">:</span> <span class="p">*</span><span class="kt">void</span><span class="p">,</span> <span class="n">cn</span><span class="p">:</span> <span class="kt">size_t</span><span class="p">,</span> <span class="n">sz</span><span class="p">:</span> <span class="kt">size_t</span><span class="p">,</span> <span class="n">cmp</span><span class="p">:</span> <span class="p">*((*</span><span class="k">const</span> <span class="kt">void</span><span class="p">,</span> <span class="p">*</span><span class="k">const</span> <span class="kt">void</span><span class="p">)</span> <span class="p">~&gt;</span> <span class="kt">int</span><span class="p">))</span> <span class="p">~&gt;</span> <span class="kt">void</span><span class="p">;</span>
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="n">compare</span><span class="p">:</span> <span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="p">*</span><span class="k">const</span> <span class="kt">void</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="p">*</span><span class="k">const</span> <span class="kt">void</span><span class="p">)</span> <span class="p">~&gt;</span> <span class="kt">int</span>
+</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="p">{</span>
+</span><span id="__span-33-5"><a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>    <span class="n">a</span> <span class="p">=</span> <span class="p">*(</span><span class="n">a</span><span class="p">:</span> <span class="p">*</span><span class="k">const</span> <span class="kt">int</span><span class="p">);</span>
+</span><span id="__span-33-6"><a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a>    <span class="n">b</span> <span class="p">=</span> <span class="p">*(</span><span class="n">b</span><span class="p">:</span> <span class="p">*</span><span class="k">const</span> <span class="kt">int</span><span class="p">);</span>
+</span><span id="__span-33-7"><a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a>
+</span><span id="__span-33-8"><a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>    <span class="k">return</span>  <span class="n">a</span> <span class="p">-</span> <span class="n">b</span><span class="p">;</span>
+</span><span id="__span-33-9"><a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a><span class="p">}</span>
+</span><span id="__span-33-10"><a id="__codelineno-33-10" name="__codelineno-33-10" href="#__codelineno-33-10"></a>
+</span><span id="__span-33-11"><a id="__codelineno-33-11" name="__codelineno-33-11" href="#__codelineno-33-11"></a><span class="p">{</span>   <span class="n">ints</span><span class="p">:</span> <span class="p">&amp;</span><span class="kt">int</span><span class="p">[]</span> <span class="p">:=</span> <span class="p">{</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="p">};</span>
+</span><span id="__span-33-12"><a id="__codelineno-33-12" name="__codelineno-33-12" href="#__codelineno-33-12"></a>
+</span><span id="__span-33-13"><a id="__codelineno-33-13" name="__codelineno-33-13" href="#__codelineno-33-13"></a>    <span class="n">qsort</span><span class="p">(</span><span class="n">ints</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="kt">int</span><span class="p">.</span><span class="n">sizeof</span><span class="p">,</span> <span class="n">compare</span><span class="p">);</span>
+</span><span id="__span-33-14"><a id="__codelineno-33-14" name="__codelineno-33-14" href="#__codelineno-33-14"></a>
+</span><span id="__span-33-15"><a id="__codelineno-33-15" name="__codelineno-33-15" href="#__codelineno-33-15"></a>    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">:</span> <span class="p">&amp;</span><span class="kt">int</span> <span class="p">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="p">++</span><span class="n">i</span><span class="p">)</span>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d &quot;</span><span class="p">,</span> <span class="n">ints</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span><span id="__span-33-16"><a id="__codelineno-33-16" name="__codelineno-33-16" href="#__codelineno-33-16"></a>
+</span><span id="__span-33-17"><a id="__codelineno-33-17" name="__codelineno-33-17" href="#__codelineno-33-17"></a>    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-33-18"><a id="__codelineno-33-18" name="__codelineno-33-18" href="#__codelineno-33-18"></a><span class="p">}</span>
+</span></code></pre></div>
+<h5 id="3322-variable-declarations">3.3.2.2. <em>Variable</em> declarations.</h5>
+<p><code>&lt;type&gt;</code> must be a reference type.</p>
+<p>Example:</p>
+<div class="language-void highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="k">struct</span> <span class="n">FILE</span><span class="p">;</span>                    <span class="c1">// Definition of opaque structure type</span>
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="n">stdin</span><span class="p">:</span>  <span class="p">&amp;*</span><span class="n">FILE</span><span class="p">;</span>                 <span class="c1">// Declarations of C&#39;s stdio streams</span>
+</span><span id="__span-34-4"><a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="n">stdout</span><span class="p">:</span> <span class="p">&amp;*</span><span class="n">FILE</span><span class="p">;</span>                 <span class="c1">// ...</span>
+</span><span id="__span-34-5"><a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a><span class="n">stderr</span><span class="p">:</span> <span class="p">&amp;*</span><span class="n">FILE</span><span class="p">;</span>                 <span class="c1">// ...</span>
+</span><span id="__span-34-6"><a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a>
+</span><span id="__span-34-7"><a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a><span class="n">fprintf</span><span class="p">:</span> <span class="p">(*</span><span class="n">FILE</span><span class="p">,</span> <span class="p">*</span><span class="k">const</span> <span class="kt">char</span><span class="p">,</span> <span class="p">...)</span> <span class="p">~&gt;</span> <span class="kt">int</span><span class="p">;</span>
+</span><span id="__span-34-8"><a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a>
+</span><span id="__span-34-9"><a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a><span class="p">(</span><span class="n">_</span><span class="p">.</span><span class="n">printf</span><span class="p">())</span> <span class="p">=</span> <span class="n">fprintf</span><span class="p">;</span>         <span class="c1">// Definition of a &quot;special identifier&quot; for fprintf.</span>
+</span><span id="__span-34-10"><a id="__codelineno-34-10" name="__codelineno-34-10" href="#__codelineno-34-10"></a>
+</span><span id="__span-34-11"><a id="__codelineno-34-11" name="__codelineno-34-11" href="#__codelineno-34-11"></a><span class="p">{</span>   <span class="n">fprintf</span><span class="p">(</span><span class="n">stdout</span><span class="p">,</span> <span class="s">&quot;Hello!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-34-12"><a id="__codelineno-34-12" name="__codelineno-34-12" href="#__codelineno-34-12"></a>
+</span><span id="__span-34-13"><a id="__codelineno-34-13" name="__codelineno-34-13" href="#__codelineno-34-13"></a>    <span class="n">stdout</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello %s...</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="s">&quot;again&quot;</span><span class="p">);</span>
+</span><span id="__span-34-14"><a id="__codelineno-34-14" name="__codelineno-34-14" href="#__codelineno-34-14"></a><span class="p">}</span>
+</span></code></pre></div>
+<h5 id="3323-constant-declarations">3.3.2.3. <em>Constant</em> declarations.</h5>
+<p>For now (Dec 2023) this is a <em>very</em> experimental case...</p>
+<p>...</p>
+<h3 id="34-expressions">3.4. Expressions.</h3>
+<p>...</p>
+<p>...</p>
+<h6 id="to-be-continued">To be continued...</h6>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../strange/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Strange">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Strange
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../examples/" class="md-footer__link md-footer__link--next" aria-label="Next: Examples">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Examples
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.footer"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

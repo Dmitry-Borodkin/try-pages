@@ -7,6 +7,6 @@ pages:
     - pip install zensical
     - zensical build --clean -f mkdocs-gitlab.yml
   pages:
-    publish: public
+    publish: site
   rules:
     - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'

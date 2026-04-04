@@ -24,7 +24,7 @@ mkdocs-gitlab.yml                                       GitLab │mkdocs-gitlab.
                                                                │
                                                                │
 ───────────────────────────────────────────────────────────────│
-Run mkdocs serve ...                                           │run_mkdocs
+Run zensical serve ...                                         │run_zensical
                                                                │
                                                                │
 ───────────────────────────────────────────────────────────────│

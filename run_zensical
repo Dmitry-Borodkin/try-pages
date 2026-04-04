@@ -2,7 +2,7 @@
 
 source .venv/bin/activate
 
-konsole -e mkdocs serve --livereload &
+konsole -e zensical serve &
 
 deactivate
 

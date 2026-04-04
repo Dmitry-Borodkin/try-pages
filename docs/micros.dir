@@ -16,4 +16,7 @@ stylesheets/extra.css                                          │stylesheets/ex
                                                                │
 img/                                                           │img/*
                                                                │
+scripts/github.py                                              │scripts/github.py
+scripts/gitlab.py                                              │scripts/gitlab.py
+                                                               │
                                                                │

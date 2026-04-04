@@ -27,7 +27,6 @@ theme:
 
 plugins:
   - search
-  - macros
 
 markdown_extensions:
   - pymdownx.tilde
@@ -48,7 +47,7 @@ exclude_docs: |
   micros.dir
 
 nav:
-  - Welcome to MkDocs: index.md
+  - Welcome to Try Pages: index.md
   - Strange:
     - strange.md
   - Tutorial:

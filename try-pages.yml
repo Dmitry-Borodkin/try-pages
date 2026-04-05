@@ -40,9 +40,6 @@ markdown_extensions:
       url_download: true
   - pymdownx.superfences
 
-extra_css:
-  - stylesheets/extra.css
-
 exclude_docs: |
   micros.dir
 

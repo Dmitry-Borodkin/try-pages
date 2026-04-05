@@ -12,8 +12,6 @@ Examples                                                       │examples.md
                                                                │
                                                                │
 ───────────────────────────────────────────────────────────────│
-stylesheets/extra.css                                          │stylesheets/extra.css
-                                                               │
 img/                                                           │img/*
                                                                │
 scripts/github.py                                              │scripts/github.py

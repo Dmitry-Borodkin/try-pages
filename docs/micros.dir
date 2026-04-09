@@ -1,20 +1,21 @@
                         ***  docs  ****                        │
                                                                │
                                                                │
-Index                                                          │index.md
+Index                   English                                │en/index.md
+...                     Русский                                │ru/index.md
                                                                │
-Strange                                                        │strange.md
+Strange                 English                                │en/strange.md
+...                     Русский                                │ru/strange.md
                                                                │
-Tutorial                                                       │tutorial.md
+Tutorial                English                                │en/tutorial.md
+...                     Русский                                │ru/tutorial.md
                                                                │
-Examples                                                       │examples.md
+Examples                English                                │en/examples.md
+...                     Русский                                │ru/examples.md
                                                                │
                                                                │
                                                                │
 ───────────────────────────────────────────────────────────────│
-img/                                                           │img/*
-                                                               │
-scripts/github.py                                              │scripts/github.py
-scripts/gitlab.py                                              │scripts/gitlab.py
+en/img/                                                        │en/img/*
                                                                │
                                                                │

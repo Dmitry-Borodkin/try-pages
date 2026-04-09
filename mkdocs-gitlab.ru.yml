@@ -1,4 +1,4 @@
-INHERIT: try-pages.yml
+INHERIT: try-pages.ru.yml
 
 site_url: https://borodkin.dn.gitlab.io/try-pages
 repo_url: https://gitlab.com/borodkin.dn/try-pages

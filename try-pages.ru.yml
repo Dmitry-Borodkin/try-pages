@@ -1,12 +1,12 @@
-site_name: Try Pages
+site_name: Типа, страницы
 
-site_dir: site
-docs_dir: docs/en
+site_dir: site/ru
+docs_dir: docs/ru
 
 theme:
   name: material
 
-  language: en
+  language: ru
 
   palette:
     # Light mode
@@ -27,8 +27,8 @@ theme:
     - navigation.tabs
     - navigation.footer
 
-  logo:    img/black_square.svg
-  favicon: img/black_square.svg
+  logo:    ../img/black_square.svg
+  favicon: ../img/black_square.svg
 
 plugins:
   - search
@@ -55,11 +55,11 @@ markdown_extensions:
   - pymdownx.superfences
 
 nav:
-  - Welcome to Try Pages: index.md
-  - Strange:
+  - Приветики: index.md
+  - Странное:
     - strange.md
-  - Tutorial:
+  - Учебник:
     - tutorial.md
-  - Examples:
+  - Примеры:
     - examples.md
 

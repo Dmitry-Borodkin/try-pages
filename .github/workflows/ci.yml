@@ -23,7 +23,8 @@ jobs:
       - run: pip install -e void_lexer
       - run: pip install mkpatcher
       - run: pip install zensical
-      - run: zensical build --clean
+      - run: zensical build --clean -f mkdocs.yml
+      - run: zensical build --clean -f mkdocs.ru.yml
       - uses: actions/upload-pages-artifact@v4
         with:
           path: site

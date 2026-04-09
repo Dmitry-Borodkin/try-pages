@@ -2,7 +2,10 @@
 
 source .venv/bin/activate
 
-konsole -e zensical serve &
+zensical build --clean -f mkdocs.yml
+zensical build --clean -f mkdocs.ru.yml
+
+konsole -e python -m http.server --directory site &
 
 deactivate
 

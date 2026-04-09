@@ -6,6 +6,7 @@ pages:
     - pip install mkpatcher
     - pip install zensical
     - zensical build --clean -f mkdocs-gitlab.yml
+    - zensical build --clean -f mkdocs-gitlab.ru.yml
   pages:
     publish: site
   rules:

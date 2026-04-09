@@ -7,3 +7,12 @@ markdown_extensions:
   - mkpatcher:
       location: scripts/gitlab.py
 
+extra:
+  alternate:
+    - name: English
+      link: /try-pages/
+      lang: en
+    - name: Русский
+      link: /try-pages/ru/
+      lang: ru
+

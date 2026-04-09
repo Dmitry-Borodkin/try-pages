@@ -31,6 +31,10 @@ mkdocs-gitlab.ru.yml    Руусский                        GitLab │mkdocs
                                                                │
                                                                │
 ───────────────────────────────────────────────────────────────│
+mkdocs-local.yml        English                         Local  │mkdocs-local.yml
+mkdocs-local.ru.yml     Руусский                        Local  │mkdocs-local.ru.yml
+                                                               │
+                                                               │
 Run zensical ...                                               │run_zensical
                                                                │
                                                                │

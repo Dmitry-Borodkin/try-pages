@@ -10,9 +10,9 @@ markdown_extensions:
 extra:
   alternate:
     - name: English
-      link: /try-pages/
+      link: /
       lang: en
     - name: Русский
-      link: /try-pages/ru/
+      link: /ru/
       lang: ru
 

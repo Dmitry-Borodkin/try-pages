@@ -2,8 +2,8 @@
 
 source .venv/bin/activate
 
-zensical build --clean -f mkdocs.yml
-zensical build --clean -f mkdocs.ru.yml
+zensical build --clean -f mkdocs-local.yml
+zensical build --clean -f mkdocs-local.ru.yml
 
 konsole -e python -m http.server --directory site &
 

@@ -1,4 +1,4 @@
-INHERIT: try-pages.yml
+INHERIT: try-pages.ru.yml
 
 site_url: https://dmitry-borodkin.github.io/try-pages
 repo_url: https://github.com/Dmitry-Borodkin/try-pages
@@ -10,9 +10,9 @@ markdown_extensions:
 extra:
   alternate:
     - name: English
-      link: /try-pages/
+      link: /
       lang: en
     - name: Русский
-      link: /try-pages/ru/
+      link: /ru/
       lang: ru
 

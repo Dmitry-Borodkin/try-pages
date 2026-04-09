@@ -33,15 +33,6 @@ theme:
 plugins:
   - search
 
-extra:
-  alternate:
-    - name: English
-      link: /
-      lang: en
-    - name: Русский
-      link: /ru/
-      lang: ru
-
 markdown_extensions:
   - pymdownx.tilde
   - pymdownx.emoji

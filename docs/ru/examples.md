@@ -11,3 +11,11 @@
 
 ...
 
+---
+
+...
+
+```void title="try_hz27.void"
+--8<-- "https://raw.githubusercontent.com/Dmitry-Borodkin/void_experiments/refs/heads/master/try_hz27.void"
+```
+

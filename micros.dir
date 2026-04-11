@@ -12,27 +12,27 @@ void_lexer/                                                    │void_lexer/mic
                                                                │
                                                                │
 ───────────────────────────────────────────────────────────────│
-try-pages.yml           English                         The... │try-pages.yml
-try-pages.ru.yml        Русский                         The... │try-pages.ru.yml
+try-pages.yml                   English                 The... │try-pages.yml
+try-pages.ru.yml                Русский                 The... │try-pages.ru.yml
                                                                │
                                                                │
 ---------------------------------------------------------------│
-mkdocs.yml              English                         GitHub │mkdocs.yml
-mkdocs.ru.yml           Русский                         GitHub │mkdocs.ru.yml
+mkdocs.yml                      English                 GitHub │mkdocs.yml
+mkdocs.ru.yml                   Русский                 GitHub │mkdocs.ru.yml
                                                                │
 .github/workflows/ci.yml                                       │.github/workflows/ci.yml
                                                                │
                                                                │
 ---------------------------------------------------------------│
-mkdocs-gitlab.yml       English                         GitLab │mkdocs-gitlab.yml
-mkdocs-gitlab.ru.yml    Руусский                        GitLab │mkdocs-gitlab.ru.yml
+mkdocs-gitlab.yml               English                 GitLab │mkdocs-gitlab.yml
+mkdocs-gitlab.ru.yml            Русский                 GitLab │mkdocs-gitlab.ru.yml
                                                                │
 .gitlab-ci.yml                                                 │.gitlab-ci.yml
                                                                │
                                                                │
 ───────────────────────────────────────────────────────────────│
-mkdocs-local.yml        English                         Local  │mkdocs-local.yml
-mkdocs-local.ru.yml     Руусский                        Local  │mkdocs-local.ru.yml
+mkdocs-local.yml                English                 Local  │mkdocs-local.yml
+mkdocs-local.ru.yml             Русский                 Local  │mkdocs-local.ru.yml
                                                                │
                                                                │
 Run zensical ...                                               │run_zensical

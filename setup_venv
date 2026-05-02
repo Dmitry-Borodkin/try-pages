@@ -1,0 +1,12 @@
+#!/bin/bash
+
+python -m venv .venv
+
+source .venv/bin/activate
+
+pip install -e void_lexer
+pip install mkpatcher
+pip install zensical
+
+deactivate
+

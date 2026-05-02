@@ -271,7 +271,7 @@ Also this is very similar to `<-` from the monadic "do" notation (in Haskell).
 
 ### 2.2. Not all functions are the same...
 
-Let's look at [The extended "Hello, world" example](#the-extended-hello-world-example).
+Let's look at [The extended "Hello, world" example](#02-the-extended-hello-world-example).
 In it's code there are several "function calls".
 Some of them actually call real functions (in the "C" language sense).
 But others do "something different"...

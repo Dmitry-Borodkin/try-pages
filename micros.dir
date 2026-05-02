@@ -35,8 +35,11 @@ mkdocs-local.yml                English                 Local  │mkdocs-local.y
 mkdocs-local.ru.yml             Русский                 Local  │mkdocs-local.ru.yml
                                                                │
                                                                │
+---------------------------------------------------------------│
 Run zensical ...                                               │run_zensical
                                                                │
+                                                               │
+Setup .venv                                                    │setup_venv
                                                                │
 ───────────────────────────────────────────────────────────────│
 .hgignore                                                      │.hgignore

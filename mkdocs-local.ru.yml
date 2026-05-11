@@ -5,7 +5,7 @@ repo_url: https://github.com/Dmitry-Borodkin/try-pages
 
 markdown_extensions:
   - mkpatcher:
-      location: scripts/github.py
+      location: scripts/gitlab.py
 
 extra:
   alternate:
